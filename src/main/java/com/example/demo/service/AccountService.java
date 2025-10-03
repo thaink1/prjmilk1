@@ -29,12 +29,8 @@ public class AccountService {
     public Account_User updateAccount(Long id, Account_User account) {
         Account_User acc = accountRepo.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found" ));
-        if (account.getPassword() != null && !account.getPassword().isEmpty()) {
             acc.setPassword(passwordEncoder.encode(account.getPassword()));
-        }
-        if (account.getRole() != null) {
             acc.setRole(account.getRole());
-        }
         return accountRepo.save(acc);
     }
 

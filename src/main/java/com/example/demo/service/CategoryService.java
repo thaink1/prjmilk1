@@ -27,12 +27,8 @@ public class CategoryService {
     public Category updateCategory(Long id, Category category){
         Category oldCategory = categoryRepo.getCategoryById(id)
                 .orElseThrow(() -> new RuntimeException("Category not found"));
-        if (category.getCategoryName() != null && !category.getCategoryName().isEmpty()) {
             oldCategory.setCategoryName(category.getCategoryName());
-        }
-        if (category.getCategoryDescription() != null && !category.getCategoryDescription().isEmpty()) {
             oldCategory.setCategoryDescription(category.getCategoryDescription());
-        }
         return categoryRepo.save(oldCategory);
     }
     public void deleteCategory(Long id){

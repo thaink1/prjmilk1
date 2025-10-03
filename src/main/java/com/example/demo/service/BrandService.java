@@ -28,15 +28,9 @@ public class BrandService {
     public Brand updateBrand(long id, Brand brand) {
         Brand oldBrand = brandRepo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Brand not found"));
-        if (brand.getName() != null && !brand.getName().isEmpty()) {
             oldBrand.setName(brand.getName());
-        }
-        if (brand.getDescription() != null && !brand.getDescription().isEmpty()) {
             oldBrand.setDescription(brand.getDescription());
-        }
-        if (brand.getCountry() != null && !brand.getCountry().isEmpty()) {
             oldBrand.setCountry(brand.getCountry());
-        }
         return brandRepo.save(oldBrand);
     }
     public void deleteBrand(long id) {
