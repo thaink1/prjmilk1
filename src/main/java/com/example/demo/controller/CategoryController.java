@@ -1,11 +1,15 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.BaseResponse;
 import com.example.demo.model.Category;
 import com.example.demo.service.CategoryService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.slf4j.MDC;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -14,25 +18,51 @@ import java.util.List;
 public class CategoryController {
     CategoryService categoryService;
     ObjectMapper objectMapper;
+
     @GetMapping("")
-    public List<Category> getCategories() {
-        return categoryService.getAllCategory();
+     BaseResponse<List<Category>> getCategories() {
+        BaseResponse <List<Category>> response = new BaseResponse<>();
+        response.setBody(categoryService.getAllCategory());
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
+
     @GetMapping("/{id}")
-    public Category getCategory(@PathVariable long id) {
-        return categoryService.getCategory(id);
+    BaseResponse<Category> getCategory(@PathVariable long id) {
+        BaseResponse<Category> response = new BaseResponse<>();
+        response.setBody(categoryService.getCategory(id));
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
+
     @PostMapping("")
-    public Category createCategory(@RequestBody Category category) {
-        return categoryService.createCategory(category);
+    BaseResponse<Category> createCategory(@Valid @RequestBody Category category) {
+        BaseResponse<Category> response = new BaseResponse<>();
+        response.setBody(categoryService.createCategory(category));
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
+    
     @PutMapping("/{id}")
-    public Category updateCategory(@PathVariable long id, @RequestBody Category category) {
-        return categoryService.updateCategory(id, category);
+    BaseResponse<Category> updateCategory(@PathVariable long id, @Valid @RequestBody Category category) {
+        BaseResponse<Category> response = new BaseResponse<>();
+        response.setBody(categoryService.updateCategory(id, category));
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
+
     @DeleteMapping("/{id}")
-    String deleteCategory(@PathVariable long id) {
+    BaseResponse<Void> deleteCategory(@PathVariable long id) {
         categoryService.deleteCategory(id);
-        return "Category has been deleted";
+
+        BaseResponse<Void> response = new BaseResponse<>();
+        response.setMessage("Delete Category successfully");
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
 }

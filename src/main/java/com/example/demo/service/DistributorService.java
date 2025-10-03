@@ -55,6 +55,6 @@ public class DistributorService {
     public void deleteDistributor(Long id) {
         Distributor distributor = distributorRepo.getDistributorByDistributorId(id)
                 .orElseThrow(() -> new RuntimeException("Distributor not found"));
-        distributorRepo.deleteById(id);
+        distributorRepo.deleteById(distributor.getDistributorId());
     }
 }

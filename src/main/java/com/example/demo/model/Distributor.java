@@ -1,6 +1,10 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,15 +22,18 @@ public class Distributor {
     @Column(name = "distributor_id")
     private Long distributorId;
 
-    @Column(name = "name", nullable = false, length = 150)
+    @NotBlank(message = "Distributor name is required")
+    @Size(max = 150, message = "Name must not exceed 150 characters")
     private String name;
 
-    @Column(name = "phone", length = 20)
+    @Pattern(regexp = "^\\d{10}$", message = "Phone number must be exactly 10 digits")
     private String phone;
 
-    @Column(name = "email", length = 100)
+
+    @Email(message = "Email should be valid")
+    @Size(max = 100, message = "Email must not exceed 100 characters")
     private String email;
 
-    @Column(name = "address", length = 255)
+    @Size(max = 255, message = "Address must not exceed 255 characters")
     private String address;
 }

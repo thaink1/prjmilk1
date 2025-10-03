@@ -1,12 +1,16 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.BaseResponse;
 import com.example.demo.model.Distributor;
 import com.example.demo.repo.DistributorRepo;
 import com.example.demo.service.DistributorService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.slf4j.MDC;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -16,25 +20,49 @@ public class DistributorController {
      DistributorService distributorService;
      ObjectMapper objectMapper;
      @GetMapping("")
-     public List<Distributor> getAllDistributors() {
-         return distributorService.findAllDistributors();
+     BaseResponse<List<Distributor>> getAllDistributors() {
+         BaseResponse<List<Distributor>> response = new BaseResponse<>();
+         response.setBody(distributorService.findAllDistributors());
+         response.setRequestId(MDC.get("requestId"));
+         response.setResponseTime(LocalDateTime.now());
+         return response;
      }
+
      @GetMapping("/{id}")
-     public Distributor getDistributorById(@PathVariable long id) {
-         return distributorService.findDistributorById(id);
+     BaseResponse<Distributor> getDistributorById(@PathVariable long id) {
+         BaseResponse<Distributor> response = new BaseResponse<>();
+         response.setBody(distributorService.findDistributorById(id));
+         response.setRequestId(MDC.get("requestId"));
+         response.setResponseTime(LocalDateTime.now());
+         return response;
      }
+
      @PostMapping("")
-        public Distributor createDistributor(@RequestBody Distributor distributor) {
-         return distributorService.createDistributor(distributor);
+        BaseResponse<Distributor> createDistributor(@Valid  @RequestBody Distributor distributor) {
+         BaseResponse<Distributor> response = new BaseResponse<>();
+         response.setBody(distributorService.createDistributor(distributor));
+         response.setRequestId(MDC.get("requestId"));
+         response.setResponseTime(LocalDateTime.now());
+         return response;
      }
+
      @PutMapping("/{id}")
-     public Distributor updateDistributor(@PathVariable long id, @RequestBody Distributor distributor) {
-         return distributorService.updateDistributor(id, distributor);
+     BaseResponse<Distributor> updateDistributor(@PathVariable long id, @Valid @RequestBody Distributor distributor) {
+        BaseResponse<Distributor> response = new BaseResponse<>();
+        response.setBody(distributorService.updateDistributor(id, distributor));
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
      }
+
      @DeleteMapping("/{id}")
-     String deleteDistributorById(@PathVariable long id) {
+     BaseResponse<Void> deleteDistributorById(@PathVariable long id) {
          distributorService.deleteDistributor(id);
-         return "Distributor deleted successfully";
+         BaseResponse<Void> response = new BaseResponse<>();
+         response.setMessage("Successfully deleted distributor");
+         response.setRequestId(MDC.get("requestId"));
+         response.setResponseTime(LocalDateTime.now());
+         return response;
      }
 
 }

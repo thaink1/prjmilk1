@@ -1,11 +1,15 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.BaseResponse;
 import com.example.demo.model.Brand;
 import com.example.demo.service.BrandService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.slf4j.MDC;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -15,24 +19,49 @@ public class BrandController {
     BrandService brandService;
     ObjectMapper objectMapper;
     @GetMapping("")
-    public List<Brand> getAllBrands() {
-        return brandService.getAllBrands();
+    BaseResponse<List<Brand>> getAllBrands() {
+        BaseResponse<List<Brand>> response = new BaseResponse<>();
+        response.setBody(brandService.getAllBrands());
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
+
     @GetMapping("/{id}")
-    public Brand getBrand(@PathVariable long id) {
-        return brandService.getBrand(id);
+    BaseResponse<Brand> getBrand(@PathVariable long id) {
+        BaseResponse<Brand> response = new BaseResponse<>();
+        response.setBody(brandService.getBrand(id));
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
+
     @PostMapping("")
-    public Brand createBrand(@RequestBody Brand brand) {
-        return brandService.createBrand(brand);
+    BaseResponse<Brand> createBrand(@Valid  @RequestBody Brand brand) {
+        BaseResponse<Brand> response = new BaseResponse<>();
+        response.setBody(brandService.createBrand(brand));
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
+
     @PutMapping("/{id}")
-    public Brand updateBrand(@PathVariable Long id, @RequestBody Brand brand) {
-        return brandService.updateBrand(id, brand);
+    BaseResponse<Brand> updateBrand(@PathVariable Long id, @Valid @RequestBody Brand brand) {
+        BaseResponse<Brand> response = new BaseResponse<>();
+        response.setBody(brandService.updateBrand(id, brand));
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
+
     @DeleteMapping("/{id}")
-    String deleteBrand(@PathVariable Long id) {
+    BaseResponse<Void> deleteBrand(@PathVariable Long id) {
         brandService.deleteBrand(id);
-        return "Brand has been deleted!!" ;
+
+        BaseResponse<Void> response = new BaseResponse<>();
+        response.setMessage("delete success");
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
     }
 }

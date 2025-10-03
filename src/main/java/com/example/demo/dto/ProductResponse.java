@@ -12,6 +12,7 @@ public class ProductResponse {
     private int capacity;
     private int weightGr;
     private float price;
+    private float finalPrice;
     private int stockQuantity;
     private Date createdDate;
     private Date expiredDate;
