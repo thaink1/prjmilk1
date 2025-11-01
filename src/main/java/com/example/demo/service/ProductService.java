@@ -12,150 +12,195 @@ import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Slf4j
 public class ProductService {
-    final ProductRepo productRepo;
-    final BrandRepo brandRepo;
-    final CategoryRepo categoryRepo;
-    final DistributorRepo distributorRepo;
-    final ObjectMapper objectMapper;
-    final ImageRepo imageRepo;
-    final PromotionRepo promotionRepo;
+
+    ProductRepo productRepo;
+    BrandRepo brandRepo;
+    CategoryRepo categoryRepo;
+    DistributorRepo distributorRepo;
+    ObjectMapper objectMapper;
+    ImageRepo imageRepo;
+    PromotionRepo promotionRepo;
 
     @PersistenceContext
     EntityManager entityManager;
 
     public ProductResponse getProductById(long id) {
-        Product product = productRepo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found"));
-        ProductIF result = productRepo.findProductByIdWithRelations(product.getProductId());
-        ProductResponse productResponse = objectMapper.convertValue(result, new TypeReference<ProductResponse>(){});
-        List<ProductImageIF> imageIFs = productRepo.findImagesByProductId(result.getProductId());
-        List<ImageResponse> images = objectMapper
-                .convertValue(imageIFs, new TypeReference<List<ImageResponse>>() {});
-        productResponse.setImages(images);
-        return  productResponse;
+        try {
+            log.info("Fetching product with ID: {}", id);
+            Product product = productRepo.findById(id)
+                    .orElseThrow(() -> {
+                        log.warn("Product not found with ID: {}", id);
+                        return new RuntimeException("Product not found");
+                    });
+
+            ProductIF result = productRepo.findProductByIdWithRelations(product.getProductId());
+            ProductResponse response = objectMapper.convertValue(result, ProductResponse.class);
+
+            List<ProductImageIF> imageIFs = productRepo.findImagesByProductId(result.getProductId());
+            List<ImageResponse> images = objectMapper.convertValue(imageIFs, new TypeReference<>() {});
+            response.setImages(images);
+
+            log.info("Fetched product successfully with ID: {}", id);
+            return response;
+        } catch (Exception e) {
+            log.error("Error fetching product with ID: {}", id, e);
+            throw e;
+        }
     }
 
     public List<ProductResponse> getAllProducts() {
-        List<ProductIF> results = productRepo.findAllProductsWithRelations();
-        List<ProductResponse> responses = objectMapper
-                .convertValue(results, new TypeReference<List<ProductResponse>>() {});
-        for (ProductResponse response : responses) {
-            List<ProductImageIF> imageIFs = productRepo.findImagesByProductId(response.getProductId());
-            List<ImageResponse> images = objectMapper
-                    .convertValue(imageIFs, new TypeReference<List<ImageResponse>>() {});
-            response.setImages(images);
-        }
-
-        return responses;
-    }
-
-@Transactional
-public ProductResponse addProduct(ProductRequest request) {
-    Product product = new Product();
-
-    if (!categoryRepo.existsById(request.getCategoryId())) {
-        throw new IllegalArgumentException("Category id not found");
-    }
-    if (!brandRepo.existsById(request.getBrandId())) {
-        throw new IllegalArgumentException("Brand not found");
-    }
-    if (!distributorRepo.existsById(request.getDistributorId())) {
-        throw new IllegalArgumentException("Distributor not found");
-    }
-    if (request.getCreatedDate().after(request.getExpiredDate())) {
-        throw new IllegalArgumentException("Created date cannot be after expired date");
-    }
-
-    BeanUtils.copyProperties(request, product);
-    productRepo.save(product);
-
-    if (request.getImages() != null) {
-        long primaryCount = request.getImages().stream().filter(ImageRequest::getIsPrimary).count();
-        if (primaryCount > 1) {
-            throw new IllegalArgumentException("Only one primary image is supported");
-        }
-        for (var img : request.getImages()) {
-            Image image = new Image();
-            image.setProductId(product.getProductId());
-            image.setUrl(img.getUrl());
-            image.setIsPrimary(img.getIsPrimary());
-            image.setCreatedAt(LocalDateTime.now());
-            imageRepo.save(image);
+        try {
+            log.info("Fetching all products...");
+            List<ProductIF> results = productRepo.findAllProductsWithRelations();
+            List<ProductResponse> responses = objectMapper.convertValue(results, new TypeReference<>() {});
+            for (ProductResponse response : responses) {
+                List<ProductImageIF> imageIFs = productRepo.findImagesByProductId(response.getProductId());
+                List<ImageResponse> images = objectMapper.convertValue(imageIFs, new TypeReference<>() {});
+                response.setImages(images);
+            }
+            log.info("Fetched {} products successfully", responses.size());
+            return responses;
+        } catch (Exception e) {
+            log.error("Error fetching all products", e);
+            throw e;
         }
     }
 
-    ProductIF productIF = productRepo.findProductByIdWithRelations(product.getProductId());
-    ProductResponse response = objectMapper.convertValue(productIF, ProductResponse.class);
+    @Transactional
+    public ProductResponse addProduct(ProductRequest request) {
+        try {
+            log.info("Creating new product with name: {}", request.getProductName());
+            validateProductRequest(request);
 
-    List<ProductImageIF> imageIFs = productRepo.findImagesByProductId(product.getProductId());
-    List<ImageResponse> imageResponses =
-            objectMapper.convertValue(imageIFs, new TypeReference<List<ImageResponse>>() {});
-    response.setImages(imageResponses);
+            Product product = new Product();
+            BeanUtils.copyProperties(request, product);
+            productRepo.save(product);
+            log.info("Product created successfully with ID: {}", product.getProductId());
 
-    return response;
-}
+            if (request.getImages() != null) {
+                validatePrimaryImage(request);
+                for (var img : request.getImages()) {
+                    Image image = new Image();
+                    image.setProductId(product.getProductId());
+                    image.setUrl(img.getUrl());
+                    image.setIsPrimary(img.getIsPrimary());
+                    image.setCreatedAt(LocalDateTime.now());
+                    imageRepo.save(image);
+                }
+                log.info("Saved {} images for product {}", request.getImages().size(), product.getProductId());
+            }
 
-@Transactional
+            ProductIF productIF = productRepo.findProductByIdWithRelations(product.getProductId());
+            ProductResponse response = objectMapper.convertValue(productIF, ProductResponse.class);
+            List<ProductImageIF> imageIFs = productRepo.findImagesByProductId(product.getProductId());
+            List<ImageResponse> imageResponses = objectMapper.convertValue(imageIFs, new TypeReference<>() {});
+            response.setImages(imageResponses);
+
+            log.info("Product created and fully loaded with relations, ID: {}", product.getProductId());
+            return response;
+        } catch (Exception e) {
+            log.error("Error creating product: {}", request.getProductName(), e);
+            throw e;
+        }
+    }
+
+    @Transactional
     public ProductResponse updateProduct(Long id, ProductRequest request) {
-    Product product = productRepo.findById(id)
-            .orElseThrow(() -> new RuntimeException("Product not found"));
-    if (!categoryRepo.existsById(request.getCategoryId())) {
-        throw new IllegalArgumentException("Category id not found");
-    }
-    if (!brandRepo.existsById(request.getBrandId())) {
-        throw new IllegalArgumentException("Brand not found");
-    }
-    if (!distributorRepo.existsById(request.getDistributorId())) {
-        throw new IllegalArgumentException("Distributor not found");
-    }
-    if (request.getCreatedDate().after(request.getExpiredDate())) {
-        throw new IllegalArgumentException("Created date cannot be after expired date");
-    }
-    BeanUtils.copyProperties(request, product);
-    productRepo.save(product);
-    if (request.getImages() != null) {
-        imageRepo.deleteByProductId(product.getProductId());
-        long primaryCount = request.getImages().stream().filter(ImageRequest::getIsPrimary).count();
-        if (primaryCount > 1) {
-            throw new IllegalArgumentException("Only one primary image is supported");
-        }else if (primaryCount == 0 ) {
-            throw new IllegalArgumentException("Must be one primary image");
+        try {
+            log.info("Updating product with ID: {}", id);
+            Product product = productRepo.findById(id)
+                    .orElseThrow(() -> {
+                        log.warn("Product not found with ID: {}", id);
+                        return new RuntimeException("Product not found");
+                    });
+
+            validateProductRequest(request);
+            BeanUtils.copyProperties(request, product);
+            productRepo.save(product);
+            log.info("Product base info updated successfully with ID: {}", id);
+
+            if (request.getImages() != null) {
+                imageRepo.deleteByProductId(product.getProductId());
+                validatePrimaryImage(request);
+
+                for (var img : request.getImages()) {
+                    Image image = new Image();
+                    image.setProductId(product.getProductId());
+                    image.setUrl(img.getUrl());
+                    image.setIsPrimary(img.getIsPrimary());
+                    image.setCreatedAt(LocalDateTime.now());
+                    imageRepo.save(image);
+                }
+                log.info("Updated {} images for product {}", request.getImages().size(), product.getProductId());
+            }
+
+            ProductIF result = productRepo.findProductByIdWithRelations(product.getProductId());
+            ProductResponse response = objectMapper.convertValue(result, new TypeReference<>() {});
+            List<ProductImageIF> imageIFs = productRepo.findImagesByProductId(result.getProductId());
+            List<ImageResponse> images = objectMapper.convertValue(imageIFs, new TypeReference<>() {});
+            response.setImages(images);
+
+            log.info("Updated product successfully with ID: {}", id);
+            return response;
+        } catch (Exception e) {
+            log.error("Error updating product with ID: {}", id, e);
+            throw e;
         }
-        for (var img : request.getImages()) {
-            Image image = new Image();
-            image.setProductId(product.getProductId());
-            image.setUrl(img.getUrl());
-            image.setIsPrimary(img.getIsPrimary());
-            image.setCreatedAt(LocalDateTime.now());
-            imageRepo.save(image);
-        }
-    }
-    ProductIF result = productRepo.findProductByIdWithRelations(product.getProductId());
-    ProductResponse productResponse = objectMapper.convertValue(result, new TypeReference<ProductResponse>(){});
-    List<ProductImageIF> imageIFs = productRepo.findImagesByProductId(result.getProductId());
-    List<ImageResponse> images = objectMapper
-            .convertValue(imageIFs, new TypeReference<List<ImageResponse>>() {});
-    productResponse.setImages(images);
-    return  productResponse;
     }
 
     public void deleteByProductId(Long productId) {
-        Product product = productRepo.findById(productId)
-                .orElseThrow(() -> new RuntimeException("Product not found"));
-        productRepo.deleteById(product.getProductId());
-        imageRepo.deleteByProductId(product.getProductId());
-        promotionRepo.deleteByProductId(product.getProductId());
+        try {
+            log.info("Deleting product with ID: {}", productId);
+            Product product = productRepo.findById(productId)
+                    .orElseThrow(() -> {
+                        log.warn("Product not found with ID: {}", productId);
+                        return new RuntimeException("Product not found");
+                    });
+
+            imageRepo.deleteByProductId(productId);
+            promotionRepo.deleteByProductId(productId);
+            productRepo.deleteById(productId);
+
+            log.info("Product deleted successfully with ID: {}", productId);
+        } catch (Exception e) {
+            log.error("Error deleting product with ID: {}", productId, e);
+            throw e;
+        }
     }
 
+    private void validateProductRequest(ProductRequest request) {
+        if (!categoryRepo.existsById(request.getCategoryId())) {
+            throw new IllegalArgumentException("Category id not found");
+        }
+        if (!brandRepo.existsById(request.getBrandId())) {
+            throw new IllegalArgumentException("Brand not found");
+        }
+        if (!distributorRepo.existsById(request.getDistributorId())) {
+            throw new IllegalArgumentException("Distributor not found");
+        }
+        if (request.getCreatedDate().after(request.getExpiredDate())) {
+            throw new IllegalArgumentException("Created date cannot be after expired date");
+        }
+    }
+
+    private void validatePrimaryImage(ProductRequest request) {
+        long primaryCount = request.getImages().stream().filter(ImageRequest::getIsPrimary).count();
+        if (primaryCount > 1) {
+            throw new IllegalArgumentException("Only one primary image is supported");
+        } else if (primaryCount == 0) {
+            throw new IllegalArgumentException("Must have one primary image");
+        }
+    }
 }

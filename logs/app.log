@@ -1,38 +1,38 @@
-2025-10-18 16:57:35 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 2912 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 16:57:35 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 16:57:36 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 16:57:36 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 16:57:36 INFO  [] [] Finished Spring Data repository scanning in 167 ms. Found 14 JPA repository interfaces.
-2025-10-18 16:57:36 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 16:57:36 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 16:57:36 INFO  [] [] Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-2025-10-18 16:57:37 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 16:57:37 INFO  [] [] Starting service [Tomcat]
-2025-10-18 16:57:37 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 16:57:37 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 16:57:37 INFO  [] [] Root WebApplicationContext: initialization completed in 1903 ms
-2025-10-18 16:57:37 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 16:57:37 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 16:57:37 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 16:57:38 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 16:57:38 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 16:57:38 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39f4a7c4
-2025-10-18 16:57:38 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 16:57:38 INFO  [] [] HHH10001005: Database info:
+2025-11-01 17:02:38 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 10772 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
+2025-11-01 17:02:38 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
+2025-11-01 17:02:39 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-01 17:02:39 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-01 17:02:39 INFO  [] [] Finished Spring Data repository scanning in 223 ms. Found 14 JPA repository interfaces.
+2025-11-01 17:02:40 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-01 17:02:40 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-01 17:02:40 INFO  [] [] Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2025-11-01 17:02:40 INFO  [] [] Tomcat initialized with port 8080 (http)
+2025-11-01 17:02:40 INFO  [] [] Starting service [Tomcat]
+2025-11-01 17:02:40 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-11-01 17:02:40 INFO  [] [] Initializing Spring embedded WebApplicationContext
+2025-11-01 17:02:40 INFO  [] [] Root WebApplicationContext: initialization completed in 1955 ms
+2025-11-01 17:02:41 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-01 17:02:41 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-01 17:02:41 INFO  [] [] HHH000026: Second-level cache disabled
+2025-11-01 17:02:41 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-01 17:02:41 INFO  [] [] HikariPool-1 - Starting...
+2025-11-01 17:02:41 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c41b8d8
+2025-11-01 17:02:42 INFO  [] [] HikariPool-1 - Start completed.
+2025-11-01 17:02:42 INFO  [] [] HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 15.14
@@ -40,739 +40,85 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-10-18 16:57:39 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 16:57:39 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 16:57:40 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 16:57:41 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 16:57:42 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 16:57:42 INFO  [] [] Started PrjmlkApplication in 7.738 seconds (process running for 8.892)
-2025-10-18 16:57:47 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 16:57:47 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 16:57:47 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 16:57:47 INFO  [234e1db1-2650-479d-8e55-a064fa70a44f] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=234e1db1-2650-479d-8e55-a064fa70a44f, signature=null
-2025-10-18 16:57:48 INFO  [234e1db1-2650-479d-8e55-a064fa70a44f] [] Completed request: status=302, duration=110ms
-2025-10-18 16:57:50 INFO  [221eb00b-a4e0-413e-b625-92f02949f636] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=221eb00b-a4e0-413e-b625-92f02949f636, signature=null
-2025-10-18 16:57:50 INFO  [221eb00b-a4e0-413e-b625-92f02949f636] [] Completed request: status=302, duration=9ms
-2025-10-18 16:58:59 INFO  [6e193220-9055-44b9-81a6-a82f67e3cf53] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=6e193220-9055-44b9-81a6-a82f67e3cf53, signature=null
-2025-10-18 16:58:59 INFO  [6e193220-9055-44b9-81a6-a82f67e3cf53] [] Completed request: status=302, duration=10ms
-2025-10-18 17:04:25 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:04:25 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:04:25 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:04:25 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:04:25 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:04:29 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 14796 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:04:29 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:04:29 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:04:29 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:04:30 INFO  [] [] Finished Spring Data repository scanning in 120 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:04:30 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:04:30 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:04:30 INFO  [] [] Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:04:30 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:04:30 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:04:30 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:04:30 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:04:30 INFO  [] [] Root WebApplicationContext: initialization completed in 1187 ms
-2025-10-18 17:04:30 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:04:30 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:04:30 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:04:31 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:04:31 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:04:31 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ede035e
-2025-10-18 17:04:31 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:04:31 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:04:32 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:04:32 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:04:32 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:04:32 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:04:33 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:04:33 INFO  [] [] Started PrjmlkApplication in 4.515 seconds (process running for 4.978)
-2025-10-18 17:04:40 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:04:40 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:04:40 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 17:04:40 INFO  [7b180a77-150e-48fc-ac26-eec7094e91dc] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=7b180a77-150e-48fc-ac26-eec7094e91dc, signature=null
-2025-10-18 17:04:40 INFO  [7b180a77-150e-48fc-ac26-eec7094e91dc] [] Completed request: status=302, duration=82ms
-2025-10-18 17:04:42 INFO  [91e7c64c-e125-46a0-bde5-880ce8530f93] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=91e7c64c-e125-46a0-bde5-880ce8530f93, signature=null
-2025-10-18 17:04:42 INFO  [91e7c64c-e125-46a0-bde5-880ce8530f93] [] Completed request: status=302, duration=8ms
-2025-10-18 17:08:03 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:08:03 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:08:03 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:08:03 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:08:03 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:08:07 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 12428 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:08:07 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:08:08 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:08:08 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:08:08 INFO  [] [] Finished Spring Data repository scanning in 122 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:08:08 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:08:08 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:08:08 INFO  [] [] Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:08:09 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:08:09 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:08:09 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:08:09 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:08:09 INFO  [] [] Root WebApplicationContext: initialization completed in 1244 ms
-2025-10-18 17:08:09 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:08:09 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:08:09 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:08:09 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:08:09 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:08:09 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39afe59f
-2025-10-18 17:08:09 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:08:09 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:08:10 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:08:10 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:08:10 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:08:11 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:08:12 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:08:12 INFO  [] [] Started PrjmlkApplication in 4.812 seconds (process running for 5.331)
-2025-10-18 17:08:17 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:08:17 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:08:17 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 17:08:17 INFO  [bd2e0266-75f7-4206-9958-02dafd68e409] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=bd2e0266-75f7-4206-9958-02dafd68e409, signature=null
-2025-10-18 17:08:17 INFO  [bd2e0266-75f7-4206-9958-02dafd68e409] [] Completed request: status=302, duration=88ms
-2025-10-18 17:09:39 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:09:39 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:09:39 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:09:39 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:09:39 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:09:42 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 10304 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:09:42 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:09:43 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:09:43 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:09:43 INFO  [] [] Finished Spring Data repository scanning in 108 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:09:43 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:09:43 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:09:43 INFO  [] [] Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:09:43 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:09:43 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:09:43 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:09:44 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:09:44 INFO  [] [] Root WebApplicationContext: initialization completed in 1076 ms
-2025-10-18 17:09:44 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:09:44 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:09:44 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:09:44 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:09:44 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:09:44 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39afe59f
-2025-10-18 17:09:44 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:09:44 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:09:45 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:09:45 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:09:45 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:09:46 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:09:46 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:09:46 INFO  [] [] Started PrjmlkApplication in 4.439 seconds (process running for 4.912)
-2025-10-18 17:09:55 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:09:55 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:09:55 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 17:09:55 INFO  [191e0e4c-2f18-496d-9c84-79b58394c5a4] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=191e0e4c-2f18-496d-9c84-79b58394c5a4, signature=null
-2025-10-18 17:09:55 INFO  [191e0e4c-2f18-496d-9c84-79b58394c5a4] [] Completed request: status=200, duration=109ms
-2025-10-18 17:09:55 INFO  [ac74d880-69f6-4a30-953b-6a2f06734f3d] [] Incoming request: method=GET, uri=/favicon.ico, X-REQUEST-ID=ac74d880-69f6-4a30-953b-6a2f06734f3d, signature=null
-2025-10-18 17:09:55 INFO  [ac74d880-69f6-4a30-953b-6a2f06734f3d] [] Completed request: status=404, duration=10ms
-2025-10-18 17:10:04 INFO  [3f64a64c-f769-4d70-8287-d8b76d903112] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=3f64a64c-f769-4d70-8287-d8b76d903112, signature=null
-2025-10-18 17:10:04 INFO  [3f64a64c-f769-4d70-8287-d8b76d903112] [] Completed request: status=200, duration=8ms
-2025-10-18 17:10:30 INFO  [0c87eddc-a152-4c3c-bcb4-04e35fa3bf20] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=0c87eddc-a152-4c3c-bcb4-04e35fa3bf20, signature=null
-2025-10-18 17:10:30 INFO  [0c87eddc-a152-4c3c-bcb4-04e35fa3bf20] [] Completed request: status=200, duration=8ms
-2025-10-18 17:11:55 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:11:55 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:11:55 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:11:55 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:11:55 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:11:59 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 15832 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:11:59 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:11:59 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:11:59 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:11:59 INFO  [] [] Finished Spring Data repository scanning in 114 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:12:00 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:12:00 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:12:00 INFO  [] [] Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:12:00 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:12:00 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:12:00 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:12:00 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:12:00 INFO  [] [] Root WebApplicationContext: initialization completed in 1104 ms
-2025-10-18 17:12:00 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:12:00 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:12:00 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:12:00 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:12:00 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:12:01 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54387873
-2025-10-18 17:12:01 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:12:01 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:12:01 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:12:01 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:12:02 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:12:02 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:12:03 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:12:03 INFO  [] [] Started PrjmlkApplication in 4.313 seconds (process running for 4.774)
-2025-10-18 17:12:07 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:12:07 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:12:07 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 17:12:07 INFO  [a6a75f8e-5538-43f5-bbec-3350ce7a471b] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=a6a75f8e-5538-43f5-bbec-3350ce7a471b, signature=null
-2025-10-18 17:12:08 INFO  [a6a75f8e-5538-43f5-bbec-3350ce7a471b] [] Completed request: status=200, duration=116ms
-2025-10-18 17:14:20 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:14:20 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:14:20 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:14:20 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:14:20 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:14:24 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 21280 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:14:24 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:14:24 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:14:24 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:14:24 INFO  [] [] Finished Spring Data repository scanning in 136 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:14:24 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:14:24 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:14:24 INFO  [] [] Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:14:25 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:14:25 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:14:25 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:14:25 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:14:25 INFO  [] [] Root WebApplicationContext: initialization completed in 1199 ms
-2025-10-18 17:14:25 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:14:25 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:14:25 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:14:25 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:14:25 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:14:25 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39afe59f
-2025-10-18 17:14:25 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:14:25 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:14:26 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:14:26 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:14:26 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:14:27 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:14:28 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:14:28 INFO  [] [] Started PrjmlkApplication in 4.39 seconds (process running for 4.896)
-2025-10-18 17:14:31 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:14:31 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:14:31 INFO  [] [] Completed initialization in 2 ms
-2025-10-18 17:14:31 INFO  [9471a8c1-3052-456d-b99d-2b3e6f83a3e6] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=9471a8c1-3052-456d-b99d-2b3e6f83a3e6, signature=null
-2025-10-18 17:14:31 INFO  [9471a8c1-3052-456d-b99d-2b3e6f83a3e6] [] Completed request: status=200, duration=116ms
-2025-10-18 17:16:40 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:16:41 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:16:41 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:16:41 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:16:41 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:16:44 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 19412 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:16:44 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:16:45 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:16:45 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:16:45 INFO  [] [] Finished Spring Data repository scanning in 111 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:16:45 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:16:45 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:16:45 INFO  [] [] Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:16:45 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:16:45 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:16:45 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:16:46 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:16:46 INFO  [] [] Root WebApplicationContext: initialization completed in 1140 ms
-2025-10-18 17:16:46 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:16:46 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:16:46 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:16:46 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:16:46 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:16:46 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43756cb
-2025-10-18 17:16:46 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:16:46 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:16:47 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:16:47 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:16:47 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:16:48 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:16:48 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:16:48 INFO  [] [] Started PrjmlkApplication in 4.492 seconds (process running for 4.991)
-2025-10-18 17:16:52 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:16:52 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:16:52 INFO  [] [] Completed initialization in 2 ms
-2025-10-18 17:16:52 INFO  [eff1feba-fb8e-44f2-9aaa-bc4b2493eb6d] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=eff1feba-fb8e-44f2-9aaa-bc4b2493eb6d, signature=null
-2025-10-18 17:16:52 INFO  [eff1feba-fb8e-44f2-9aaa-bc4b2493eb6d] [] Completed request: status=200, duration=117ms
-2025-10-18 17:19:10 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:19:10 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:19:10 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:19:10 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:19:10 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:19:33 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 9516 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:19:33 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:19:34 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:19:34 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:19:34 INFO  [] [] Finished Spring Data repository scanning in 124 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:19:34 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:19:34 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:19:34 INFO  [] [] Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:19:34 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:19:34 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:19:34 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:19:34 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:19:34 INFO  [] [] Root WebApplicationContext: initialization completed in 1182 ms
-2025-10-18 17:19:35 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:19:35 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:19:35 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:19:35 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:19:35 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:19:35 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39afe59f
-2025-10-18 17:19:35 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:19:35 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:19:36 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:19:36 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:19:36 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:19:37 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:19:37 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:19:37 INFO  [] [] Started PrjmlkApplication in 4.54 seconds (process running for 5.008)
-2025-10-18 17:19:45 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:19:45 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:19:45 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 17:19:45 INFO  [7dadadf2-3e7d-4c8d-8263-94ec1bb3b3ac] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=7dadadf2-3e7d-4c8d-8263-94ec1bb3b3ac, signature=null
-2025-10-18 17:19:46 INFO  [7dadadf2-3e7d-4c8d-8263-94ec1bb3b3ac] [] Completed request: status=302, duration=84ms
-2025-10-18 17:20:24 INFO  [9dd88a31-cb01-4f29-8cc2-8b5502582354] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=9dd88a31-cb01-4f29-8cc2-8b5502582354, signature=null
-2025-10-18 17:20:24 INFO  [9dd88a31-cb01-4f29-8cc2-8b5502582354] [] Completed request: status=302, duration=8ms
-2025-10-18 17:22:30 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:22:30 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:22:30 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:22:30 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:22:30 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:22:33 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 13164 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:22:33 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:22:34 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:22:34 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:22:34 INFO  [] [] Finished Spring Data repository scanning in 111 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:22:34 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:22:34 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:22:34 INFO  [] [] Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:22:34 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:22:34 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:22:34 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:22:34 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:22:34 INFO  [] [] Root WebApplicationContext: initialization completed in 1080 ms
-2025-10-18 17:22:35 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:22:35 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:22:35 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:22:35 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:22:35 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:22:35 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43756cb
-2025-10-18 17:22:35 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:22:35 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:22:36 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:22:36 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:22:36 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:22:37 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:22:37 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:22:37 INFO  [] [] Started PrjmlkApplication in 4.651 seconds (process running for 5.079)
-2025-10-18 17:22:50 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:22:50 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:22:50 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 17:22:50 INFO  [95801c05-65bd-427f-8546-02af63ca5404] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=95801c05-65bd-427f-8546-02af63ca5404, signature=null
-2025-10-18 17:22:50 INFO  [95801c05-65bd-427f-8546-02af63ca5404] [] Completed request: status=302, duration=83ms
-2025-10-18 17:27:44 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:27:44 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:27:44 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:27:44 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:27:44 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:27:49 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 4160 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:27:49 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:27:49 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:27:49 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:27:49 INFO  [] [] Finished Spring Data repository scanning in 149 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:27:49 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:27:49 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:27:49 INFO  [] [] Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:27:50 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:27:50 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:27:50 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:27:50 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:27:50 INFO  [] [] Root WebApplicationContext: initialization completed in 1349 ms
-2025-10-18 17:27:50 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:27:50 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:27:50 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:27:51 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:27:51 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:27:51 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39f4a7c4
-2025-10-18 17:27:51 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:27:51 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:27:52 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:27:52 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:27:52 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:27:53 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:27:53 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:27:53 INFO  [] [] Started PrjmlkApplication in 5.057 seconds (process running for 5.54)
-2025-10-18 17:28:04 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:28:04 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:28:04 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 17:28:04 INFO  [501c5e74-76f0-4d99-bdd7-2adc06ccf182] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=501c5e74-76f0-4d99-bdd7-2adc06ccf182, signature=null
-2025-10-18 17:28:05 INFO  [501c5e74-76f0-4d99-bdd7-2adc06ccf182] [] Completed request: status=302, duration=94ms
-2025-10-18 17:29:22 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:29:22 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:29:22 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:29:22 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:29:22 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:29:24 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 14636 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:29:24 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:29:25 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:29:25 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:29:25 INFO  [] [] Finished Spring Data repository scanning in 117 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:29:25 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:29:25 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:29:25 INFO  [] [] Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:29:26 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:29:26 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:29:26 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:29:26 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:29:26 INFO  [] [] Root WebApplicationContext: initialization completed in 1406 ms
-2025-10-18 17:29:26 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:29:26 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:29:26 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:29:26 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:29:26 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:29:27 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43756cb
-2025-10-18 17:29:27 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:29:27 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:29:27 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:29:27 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:29:28 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:29:29 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:29:29 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:29:29 INFO  [] [] Started PrjmlkApplication in 5.128 seconds (process running for 5.749)
-2025-10-18 17:29:35 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:29:35 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:29:35 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 17:29:35 INFO  [a981f160-ee52-465a-8e09-bb3b4d79a846] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=a981f160-ee52-465a-8e09-bb3b4d79a846, signature=null
-2025-10-18 17:29:36 INFO  [a981f160-ee52-465a-8e09-bb3b4d79a846] [] Completed request: status=302, duration=89ms
-2025-10-18 17:30:09 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:30:09 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:30:09 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:30:09 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:30:09 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:30:26 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 3932 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:30:26 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:30:26 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:30:26 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:30:26 INFO  [] [] Finished Spring Data repository scanning in 118 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:30:27 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:30:27 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:30:27 INFO  [] [] Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:30:27 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:30:27 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:30:27 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:30:27 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:30:27 INFO  [] [] Root WebApplicationContext: initialization completed in 1194 ms
-2025-10-18 17:30:27 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:30:27 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:30:27 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:30:27 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:30:27 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:30:28 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d9af731
-2025-10-18 17:30:28 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:30:28 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:30:28 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:30:28 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:30:29 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:30:29 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:30:30 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:30:30 INFO  [] [] Started PrjmlkApplication in 4.628 seconds (process running for 5.246)
-2025-10-18 17:30:37 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:30:37 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:30:37 INFO  [] [] Completed initialization in 2 ms
-2025-10-18 17:30:37 INFO  [c9287e07-cc20-43e0-a33f-3a3daad2d7d2] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=c9287e07-cc20-43e0-a33f-3a3daad2d7d2, signature=null
-2025-10-18 17:30:37 INFO  [c9287e07-cc20-43e0-a33f-3a3daad2d7d2] [] Completed request: status=302, duration=87ms
-2025-10-18 17:38:43 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:38:43 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:38:43 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:38:43 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:38:43 INFO  [] [] HikariPool-1 - Shutdown completed.
-2025-10-18 17:40:44 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 14168 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
-2025-10-18 17:40:44 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
-2025-10-18 17:40:45 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:40:45 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 17:40:45 INFO  [] [] Finished Spring Data repository scanning in 118 ms. Found 14 JPA repository interfaces.
-2025-10-18 17:40:45 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
-2025-10-18 17:40:45 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-10-18 17:40:45 INFO  [] [] Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-2025-10-18 17:40:45 INFO  [] [] Tomcat initialized with port 8080 (http)
-2025-10-18 17:40:45 INFO  [] [] Starting service [Tomcat]
-2025-10-18 17:40:45 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-18 17:40:46 INFO  [] [] Initializing Spring embedded WebApplicationContext
-2025-10-18 17:40:46 INFO  [] [] Root WebApplicationContext: initialization completed in 1241 ms
-2025-10-18 17:40:46 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 17:40:46 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-10-18 17:40:46 INFO  [] [] HHH000026: Second-level cache disabled
-2025-10-18 17:40:46 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-18 17:40:46 INFO  [] [] HikariPool-1 - Starting...
-2025-10-18 17:40:46 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16f34376
-2025-10-18 17:40:46 INFO  [] [] HikariPool-1 - Start completed.
-2025-10-18 17:40:46 INFO  [] [] HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 15.14
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-10-18 17:40:47 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-18 17:40:47 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:40:47 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-10-18 17:40:48 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 17:40:49 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
-2025-10-18 17:40:49 INFO  [] [] Started PrjmlkApplication in 4.716 seconds (process running for 5.253)
-2025-10-18 17:40:57 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 17:40:57 INFO  [] [] Initializing Servlet 'dispatcherServlet'
-2025-10-18 17:40:57 INFO  [] [] Completed initialization in 1 ms
-2025-10-18 17:40:57 INFO  [291b206a-f309-4c0a-8e7a-e9097fc26038] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=291b206a-f309-4c0a-8e7a-e9097fc26038, signature=null
-2025-10-18 17:40:57 INFO  [291b206a-f309-4c0a-8e7a-e9097fc26038] [] Completed request: status=302, duration=105ms
-2025-10-18 17:40:58 INFO  [15afdf58-dd1c-47ae-b77d-4c749fe6c94d] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=15afdf58-dd1c-47ae-b77d-4c749fe6c94d, signature=null
-2025-10-18 17:40:58 INFO  [15afdf58-dd1c-47ae-b77d-4c749fe6c94d] [] Completed request: status=302, duration=11ms
-2025-10-18 17:41:57 INFO  [56c478ed-1603-45a7-a7f8-13960440c01c] [] Incoming request: method=GET, uri=/vnpay/return, X-REQUEST-ID=56c478ed-1603-45a7-a7f8-13960440c01c, signature=null
-2025-10-18 17:41:57 INFO  [56c478ed-1603-45a7-a7f8-13960440c01c] [] Completed request: status=200, duration=63ms
-2025-10-18 17:43:40 INFO  [1e81df31-02ae-411b-9bc0-74769f4cef50] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=1e81df31-02ae-411b-9bc0-74769f4cef50, signature=null
-2025-10-18 17:43:40 INFO  [1e81df31-02ae-411b-9bc0-74769f4cef50] [] Completed request: status=302, duration=11ms
-2025-10-18 17:43:43 INFO  [d60eed44-7c87-491d-aab9-b9db8635dcef] [] Incoming request: method=GET, uri=/vnpay/create, X-REQUEST-ID=d60eed44-7c87-491d-aab9-b9db8635dcef, signature=null
-2025-10-18 17:43:43 INFO  [d60eed44-7c87-491d-aab9-b9db8635dcef] [] Completed request: status=302, duration=8ms
-2025-10-18 17:44:27 INFO  [71acd81a-3905-4846-a004-a89b4bc554b6] [] Incoming request: method=GET, uri=/vnpay/return, X-REQUEST-ID=71acd81a-3905-4846-a004-a89b4bc554b6, signature=null
-2025-10-18 17:44:27 INFO  [71acd81a-3905-4846-a004-a89b4bc554b6] [] Completed request: status=200, duration=16ms
-2025-10-18 17:45:54 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
-2025-10-18 17:45:54 INFO  [] [] Graceful shutdown complete
-2025-10-18 17:45:54 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 17:45:54 INFO  [] [] HikariPool-1 - Shutdown initiated...
-2025-10-18 17:45:54 INFO  [] [] HikariPool-1 - Shutdown completed.
+2025-11-01 17:02:44 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-01 17:02:44 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-01 17:02:45 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-01 17:02:47 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-01 17:02:49 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
+2025-11-01 17:02:49 INFO  [] [] Started PrjmlkApplication in 10.799 seconds (process running for 11.639)
+2025-11-01 17:03:01 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-01 17:03:01 INFO  [] [] Initializing Servlet 'dispatcherServlet'
+2025-11-01 17:03:01 INFO  [] [] Completed initialization in 2 ms
+2025-11-01 17:03:01 INFO  [cbaf02de-17dc-4785-9746-ed53b3cea111] [] Incoming request: method=GET, uri=/brand/7, X-REQUEST-ID=cbaf02de-17dc-4785-9746-ed53b3cea111, signature=null
+2025-11-01 17:03:01 INFO  [cbaf02de-17dc-4785-9746-ed53b3cea111] [] Fetching brand with ID: 7
+2025-11-01 17:03:01 WARN  [cbaf02de-17dc-4785-9746-ed53b3cea111] [] Brand not found with ID: 7
+2025-11-01 17:03:01 ERROR [cbaf02de-17dc-4785-9746-ed53b3cea111] [] Error while fetching brand with ID: 7
+java.lang.RuntimeException: Brand not found
+	at com.example.demo.service.BrandService.lambda$getBrand$0(BrandService.java:33)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.example.demo.service.BrandService.getBrand(BrandService.java:31)
+	at com.example.demo.controller.BrandController.getBrand(BrandController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.demo.filter.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-11-01 17:03:01 INFO  [cbaf02de-17dc-4785-9746-ed53b3cea111] [] Completed request: status=400, duration=386ms
+2025-11-01 17:05:05 INFO  [09c6a0aa-84d3-47ee-b4e6-d2e4df1b0dd0] [] Incoming request: method=GET, uri=/brand/8, X-REQUEST-ID=09c6a0aa-84d3-47ee-b4e6-d2e4df1b0dd0, signature=null
+2025-11-01 17:05:05 INFO  [09c6a0aa-84d3-47ee-b4e6-d2e4df1b0dd0] [] Fetching brand with ID: 8
+2025-11-01 17:05:05 INFO  [09c6a0aa-84d3-47ee-b4e6-d2e4df1b0dd0] [] Brand fetched successfully: Abbott
+2025-11-01 17:05:05 INFO  [09c6a0aa-84d3-47ee-b4e6-d2e4df1b0dd0] [] Completed request: status=200, duration=22ms
+2025-11-01 17:06:02 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-01 17:06:02 INFO  [] [] Graceful shutdown complete
+2025-11-01 17:06:02 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-01 17:06:02 INFO  [] [] HikariPool-1 - Shutdown initiated...
+2025-11-01 17:06:02 INFO  [] [] HikariPool-1 - Shutdown completed.
