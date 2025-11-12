@@ -29,6 +29,8 @@ public class Sale_DetailService {
     private final Sale_DetailRepo saleDetailRepo;
     private final ObjectMapper objectMapper;
     private final ProductRepo productRepo;
+    private final InventoryHistoryService inventoryHistoryService;
+
 
     public List<Sale_DetailResponse> getSaleDetailBySaleId(Long saleId) {
         try {
@@ -102,6 +104,8 @@ public class Sale_DetailService {
             inventory.setDate(saleInvoice.getDate().atStartOfDay());
             inventory.setReason("Sale Product");
             inventoryRepo.save(inventory);
+            inventoryHistoryService.createHistory(inventory);
+
 
             Sale_DetailIF result2 = saleDetailRepo.findSaleDetailById(saleDetail.getSaleDetailId());
             Sale_DetailResponse response2 = objectMapper.convertValue(result2, Sale_DetailResponse.class);
@@ -157,6 +161,8 @@ public class Sale_DetailService {
             inventory.setReason("Updated Sale Detail");
             inventory.setDate(LocalDateTime.now());
             inventoryRepo.save(inventory);
+            inventoryHistoryService.createHistory(inventory);
+
 
             Sale_DetailIF result2 = saleDetailRepo.findSaleDetailById(id);
             Sale_DetailResponse response2 = objectMapper.convertValue(result2, Sale_DetailResponse.class);
@@ -198,6 +204,8 @@ public class Sale_DetailService {
             inventory.setReason("Deleted Sale Detail");
             inventory.setDate(LocalDateTime.now());
             inventoryRepo.save(inventory);
+            inventoryHistoryService.createHistory(inventory);
+
 
             saleDetailRepo.delete(saleDetail);
             log.info("Deleted sale detail successfully with ID: {}", id);

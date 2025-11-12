@@ -25,11 +25,12 @@ public class CustomerController {
         BaseResponse<List<Customer>> response = new BaseResponse<>();
         try {
             log.info("Request to get all customers");
-            response.setBody(customerService.getAllCustomers());
+            List<Customer> customers = customerService.getAllCustomers();
+            response.setBody(customers);
             response.setMessage("Fetched all customers successfully");
         } catch (Exception e) {
             log.error("Error fetching all customers", e);
-            response.setMessage("Failed to fetch customers: " + e.getMessage());
+            throw e; // ❗ để GlobalExceptionHandler xử lý
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -41,11 +42,12 @@ public class CustomerController {
         BaseResponse<Customer> response = new BaseResponse<>();
         try {
             log.info("Request to get customer by email: {}", email);
-            response.setBody(customerService.findByEmail(email));
+            Customer customer = customerService.findByEmail(email);
+            response.setBody(customer);
             response.setMessage("Fetched customer successfully");
         } catch (Exception e) {
             log.error("Error fetching customer by email: {}", email, e);
-            response.setMessage("Failed to fetch customer: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -57,11 +59,12 @@ public class CustomerController {
         BaseResponse<Customer> response = new BaseResponse<>();
         try {
             log.info("Request to get customer by phone: {}", phone);
-            response.setBody(customerService.findByPhone(phone));
+            Customer customer = customerService.findByPhone(phone);
+            response.setBody(customer);
             response.setMessage("Fetched customer successfully");
         } catch (Exception e) {
             log.error("Error fetching customer by phone: {}", phone, e);
-            response.setMessage("Failed to fetch customer: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -70,15 +73,12 @@ public class CustomerController {
 
     @PostMapping
     public BaseResponse<Customer> createCustomer(@Valid @RequestBody Customer customer) {
+        log.info("Request to create customer: {}", customer.getEmail());
+        Customer created = customerService.createCustomer(customer);
+
         BaseResponse<Customer> response = new BaseResponse<>();
-        try {
-            log.info("Request to create customer: {}", customer.getEmail());
-            response.setBody(customerService.createCustomer(customer));
-            response.setMessage("Customer created successfully");
-        } catch (Exception e) {
-            log.error("Error creating customer: {}", customer.getEmail(), e);
-            response.setMessage("Failed to create customer: " + e.getMessage());
-        }
+        response.setMessage("Customer created successfully");
+        response.setBody(created);
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -89,11 +89,12 @@ public class CustomerController {
         BaseResponse<Customer> response = new BaseResponse<>();
         try {
             log.info("Request to update customer with ID: {}", id);
-            response.setBody(customerService.updateCustomer(id, customer));
+            Customer updated = customerService.updateCustomer(id, customer);
+            response.setBody(updated);
             response.setMessage("Customer updated successfully");
         } catch (Exception e) {
             log.error("Error updating customer with ID: {}", id, e);
-            response.setMessage("Failed to update customer: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -106,10 +107,10 @@ public class CustomerController {
         try {
             log.info("Request to delete customer with ID: {}", id);
             customerService.deleteCustomer(id);
-            response.setMessage("Deleted Customer with id: " + id + " successfully");
+            response.setMessage("Deleted customer with ID: " + id + " successfully");
         } catch (Exception e) {
             log.error("Error deleting customer with ID: {}", id, e);
-            response.setMessage("Failed to delete customer: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());

@@ -27,11 +27,12 @@ public class CategoryController {
         BaseResponse<List<Category>> response = new BaseResponse<>();
         try {
             log.info("Request to get all categories");
-            response.setBody(categoryService.getAllCategory());
+            List<Category> categories = categoryService.getAllCategory();
+            response.setBody(categories);
             response.setMessage("Fetched all categories successfully");
         } catch (Exception e) {
             log.error("Error fetching all categories", e);
-            response.setMessage("Failed to fetch categories: " + e.getMessage());
+            throw e; // để GlobalExceptionHandler xử lý
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -43,11 +44,12 @@ public class CategoryController {
         BaseResponse<Category> response = new BaseResponse<>();
         try {
             log.info("Request to get category with ID: {}", id);
-            response.setBody(categoryService.getCategory(id));
+            Category category = categoryService.getCategory(id);
+            response.setBody(category);
             response.setMessage("Fetched category successfully");
         } catch (Exception e) {
             log.error("Error fetching category with ID: {}", id, e);
-            response.setMessage("Failed to fetch category: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -56,15 +58,12 @@ public class CategoryController {
 
     @PostMapping("")
     public BaseResponse<Category> createCategory(@Valid @RequestBody Category category) {
+        log.info("Request to create category: {}", category.getCategoryName());
+        Category created = categoryService.createCategory(category);
+
         BaseResponse<Category> response = new BaseResponse<>();
-        try {
-            log.info("Request to create category: {}", category.getCategoryName());
-            response.setBody(categoryService.createCategory(category));
-            response.setMessage("Category created successfully");
-        } catch (Exception e) {
-            log.error("Error creating category: {}", category.getCategoryName(), e);
-            response.setMessage("Failed to create category: " + e.getMessage());
-        }
+        response.setMessage("Category created successfully");
+        response.setBody(created);
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -75,11 +74,12 @@ public class CategoryController {
         BaseResponse<Category> response = new BaseResponse<>();
         try {
             log.info("Request to update category with ID: {}", id);
-            response.setBody(categoryService.updateCategory(id, category));
+            Category updated = categoryService.updateCategory(id, category);
+            response.setBody(updated);
             response.setMessage("Category updated successfully");
         } catch (Exception e) {
             log.error("Error updating category with ID: {}", id, e);
-            response.setMessage("Failed to update category: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -95,7 +95,7 @@ public class CategoryController {
             response.setMessage("Category deleted successfully");
         } catch (Exception e) {
             log.error("Error deleting category with ID: {}", id, e);
-            response.setMessage("Failed to delete category: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());

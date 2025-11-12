@@ -28,6 +28,7 @@ public class Sale_InvoiceService {
     private final Sale_InvoiceRepo sale_invoiceRepo;
     private final ObjectMapper objectMapper;
     private final CustomerRepo customerRepo;
+    private final InventoryHistoryService inventoryHistoryService;
 
     public List<Sale_InvoiceResponse> getAllSaleInvoices() {
         try {
@@ -142,6 +143,9 @@ public class Sale_InvoiceService {
                 inventory.setDate(LocalDateTime.now());
                 inventory.setReason("Delete sale invoice");
                 inventoryRepo.save(inventory);
+                inventoryHistoryService.createHistory(inventory);
+
+
 
                 log.info("Restored stock and inventory for product ID: {}", product.getProductId());
             }

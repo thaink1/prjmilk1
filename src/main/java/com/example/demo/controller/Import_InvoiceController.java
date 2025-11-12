@@ -26,11 +26,12 @@ public class Import_InvoiceController {
         BaseResponse<List<Import_InvoiceResponse>> response = new BaseResponse<>();
         try {
             log.info("Request to fetch all import invoices");
-            response.setBody(importInvoiceService.getAll());
+            List<Import_InvoiceResponse> invoices = importInvoiceService.getAll();
+            response.setBody(invoices);
             response.setMessage("Fetched all import invoices successfully");
         } catch (Exception e) {
             log.error("Error fetching import invoices", e);
-            response.setMessage("Failed to fetch import invoices: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -42,11 +43,12 @@ public class Import_InvoiceController {
         BaseResponse<Import_InvoiceResponse> response = new BaseResponse<>();
         try {
             log.info("Fetching import invoice by ID: {}", id);
-            response.setBody(importInvoiceService.findById(id));
+            Import_InvoiceResponse invoice = importInvoiceService.findById(id);
+            response.setBody(invoice);
             response.setMessage("Fetched import invoice successfully");
         } catch (Exception e) {
             log.error("Error fetching import invoice with ID: {}", id, e);
-            response.setMessage("Failed to fetch import invoice: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -55,15 +57,12 @@ public class Import_InvoiceController {
 
     @PostMapping("")
     public BaseResponse<Import_InvoiceResponse> create(@Valid @RequestBody Import_Invoice importInvoice) {
+        log.info("Creating new import invoice for distributorId: {}", importInvoice.getDistributorId());
+        Import_InvoiceResponse created = importInvoiceService.createImport_Invoice(importInvoice);
+
         BaseResponse<Import_InvoiceResponse> response = new BaseResponse<>();
-        try {
-            log.info("Creating new import invoice for distributorId: {}", importInvoice.getDistributorId());
-            response.setBody(importInvoiceService.createImport_Invoice(importInvoice));
-            response.setMessage("Import invoice created successfully");
-        } catch (Exception e) {
-            log.error("Error creating import invoice", e);
-            response.setMessage("Failed to create import invoice: " + e.getMessage());
-        }
+        response.setBody(created);
+        response.setMessage("Import invoice created successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -76,11 +75,12 @@ public class Import_InvoiceController {
         BaseResponse<Import_InvoiceResponse> response = new BaseResponse<>();
         try {
             log.info("Updating import invoice ID: {}", id);
-            response.setBody(importInvoiceService.updateImport_Invoice(id, importInvoice));
+            Import_InvoiceResponse updated = importInvoiceService.updateImport_Invoice(id, importInvoice);
+            response.setBody(updated);
             response.setMessage("Import invoice updated successfully");
         } catch (Exception e) {
             log.error("Error updating import invoice ID: {}", id, e);
-            response.setMessage("Failed to update import invoice: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -96,7 +96,7 @@ public class Import_InvoiceController {
             response.setMessage("Import invoice deleted successfully");
         } catch (Exception e) {
             log.error("Error deleting import invoice ID: {}", id, e);
-            response.setMessage("Failed to delete import invoice: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());

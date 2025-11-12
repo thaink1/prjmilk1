@@ -28,6 +28,7 @@ public class Import_InvoiceService {
     private final Import_DetailRepo import_DetailRepo;
     private final ProductRepo productRepo;
     private final InventoryRepo inventoryRepo;
+    private final InventoryHistoryService inventoryHistoryService;
 
     public List<Import_InvoiceResponse> getAll() {
         try {
@@ -145,6 +146,8 @@ public class Import_InvoiceService {
                 inventory.setDate(LocalDateTime.now());
                 inventory.setReason("Delete Import");
                 inventoryRepo.save(inventory);
+                inventoryHistoryService.createHistory(inventory);
+
                 log.info("Recorded inventory change for product {} after import delete", product.getProductId());
             }
 

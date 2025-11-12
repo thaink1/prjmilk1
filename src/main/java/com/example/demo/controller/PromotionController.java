@@ -23,15 +23,12 @@ public class PromotionController {
 
     @GetMapping("")
     public BaseResponse<List<PromotionResponse>> findAll() {
+        log.info("Fetching all promotions");
+        List<PromotionResponse> promotions = promotionService.getAllPromotions();
+
         BaseResponse<List<PromotionResponse>> response = new BaseResponse<>();
-        try {
-            log.info("Fetching all promotions");
-            response.setBody(promotionService.getAllPromotions());
-            response.setMessage("Fetched all promotions successfully");
-        } catch (Exception e) {
-            log.error("Error fetching promotions", e);
-            response.setMessage("Failed to fetch promotions: " + e.getMessage());
-        }
+        response.setBody(promotions);
+        response.setMessage("Fetched all promotions successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -39,15 +36,12 @@ public class PromotionController {
 
     @GetMapping("/{id}")
     public BaseResponse<PromotionResponse> getPromotionById(@PathVariable Long id) {
+        log.info("Fetching promotion with ID: {}", id);
+        PromotionResponse promotion = promotionService.getPromotionById(id);
+
         BaseResponse<PromotionResponse> response = new BaseResponse<>();
-        try {
-            log.info("Fetching promotion with ID: {}", id);
-            response.setBody(promotionService.getPromotionById(id));
-            response.setMessage("Fetched promotion successfully");
-        } catch (Exception e) {
-            log.error("Error fetching promotion with ID: {}", id, e);
-            response.setMessage("Failed to fetch promotion: " + e.getMessage());
-        }
+        response.setBody(promotion);
+        response.setMessage("Fetched promotion successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -55,15 +49,12 @@ public class PromotionController {
 
     @PostMapping("")
     public BaseResponse<PromotionResponse> createPromotion(@Valid @RequestBody Promotion promotion) {
+        log.info("Creating new promotion: {}", promotion.getName());
+        PromotionResponse created = promotionService.createPromotion(promotion);
+
         BaseResponse<PromotionResponse> response = new BaseResponse<>();
-        try {
-            log.info("Creating new promotion: {}", promotion.getName());
-            response.setBody(promotionService.createPromotion(promotion));
-            response.setMessage("Promotion created successfully");
-        } catch (Exception e) {
-            log.error("Error creating promotion", e);
-            response.setMessage("Failed to create promotion: " + e.getMessage());
-        }
+        response.setBody(created);
+        response.setMessage("Promotion created successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -73,15 +64,12 @@ public class PromotionController {
     public BaseResponse<PromotionResponse> updatePromotion(
             @PathVariable Long id,
             @Valid @RequestBody Promotion promotion) {
+        log.info("Updating promotion ID: {}", id);
+        PromotionResponse updated = promotionService.updatePromotion(id, promotion);
+
         BaseResponse<PromotionResponse> response = new BaseResponse<>();
-        try {
-            log.info("Updating promotion ID: {}", id);
-            response.setBody(promotionService.updatePromotion(id, promotion));
-            response.setMessage("Promotion updated successfully");
-        } catch (Exception e) {
-            log.error("Error updating promotion ID: {}", id, e);
-            response.setMessage("Failed to update promotion: " + e.getMessage());
-        }
+        response.setBody(updated);
+        response.setMessage("Promotion updated successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -89,15 +77,11 @@ public class PromotionController {
 
     @DeleteMapping("/{id}")
     public BaseResponse<Void> deletePromotion(@PathVariable Long id) {
+        log.info("Deleting promotion ID: {}", id);
+        promotionService.deletePromotion(id);
+
         BaseResponse<Void> response = new BaseResponse<>();
-        try {
-            log.info("Deleting promotion ID: {}", id);
-            promotionService.deletePromotion(id);
-            response.setMessage("Promotion deleted successfully");
-        } catch (Exception e) {
-            log.error("Error deleting promotion ID: {}", id, e);
-            response.setMessage("Failed to delete promotion: " + e.getMessage());
-        }
+        response.setMessage("Promotion deleted successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;

@@ -23,15 +23,12 @@ public class ProductController {
 
     @GetMapping("")
     public BaseResponse<List<ProductResponse>> getAllProducts() {
+        log.info("Fetching all products...");
+        List<ProductResponse> products = productService.getAllProducts();
+
         BaseResponse<List<ProductResponse>> response = new BaseResponse<>();
-        try {
-            log.info("Fetching all products...");
-            response.setBody(productService.getAllProducts());
-            response.setMessage("Fetched all products successfully");
-        } catch (Exception e) {
-            log.error("Error fetching all products", e);
-            response.setMessage("Failed to fetch products: " + e.getMessage());
-        }
+        response.setBody(products);
+        response.setMessage("Fetched all products successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -39,15 +36,12 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public BaseResponse<ProductResponse> getProductById(@PathVariable Long id) {
+        log.info("Fetching product with ID: {}", id);
+        ProductResponse product = productService.getProductById(id);
+
         BaseResponse<ProductResponse> response = new BaseResponse<>();
-        try {
-            log.info("Fetching product with ID: {}", id);
-            response.setBody(productService.getProductById(id));
-            response.setMessage("Fetched product successfully");
-        } catch (Exception e) {
-            log.error("Error fetching product with ID: {}", id, e);
-            response.setMessage("Failed to fetch product: " + e.getMessage());
-        }
+        response.setBody(product);
+        response.setMessage("Fetched product successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -55,15 +49,12 @@ public class ProductController {
 
     @PostMapping("")
     public BaseResponse<ProductResponse> addProduct(@Valid @RequestBody ProductRequest request) {
+        log.info("Creating new product: {}", request.getProductName());
+        ProductResponse created = productService.addProduct(request);
+
         BaseResponse<ProductResponse> response = new BaseResponse<>();
-        try {
-            log.info("Creating new product: {}", request.getProductName());
-            response.setBody(productService.addProduct(request));
-            response.setMessage("Product created successfully");
-        } catch (Exception e) {
-            log.error("Error creating product: {}", request.getProductName(), e);
-            response.setMessage("Failed to create product: " + e.getMessage());
-        }
+        response.setBody(created);
+        response.setMessage("Product created successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -73,15 +64,12 @@ public class ProductController {
     public BaseResponse<ProductResponse> updateProduct(
             @PathVariable Long id,
             @Valid @RequestBody ProductRequest request) {
+        log.info("Updating product with ID: {}", id);
+        ProductResponse updated = productService.updateProduct(id, request);
+
         BaseResponse<ProductResponse> response = new BaseResponse<>();
-        try {
-            log.info("Updating product with ID: {}", id);
-            response.setBody(productService.updateProduct(id, request));
-            response.setMessage("Product updated successfully");
-        } catch (Exception e) {
-            log.error("Error updating product with ID: {}", id, e);
-            response.setMessage("Failed to update product: " + e.getMessage());
-        }
+        response.setBody(updated);
+        response.setMessage("Product updated successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -89,15 +77,11 @@ public class ProductController {
 
     @DeleteMapping("/{id}")
     public BaseResponse<Void> deleteProduct(@PathVariable Long id) {
+        log.info("Deleting product with ID: {}", id);
+        productService.deleteByProductId(id);
+
         BaseResponse<Void> response = new BaseResponse<>();
-        try {
-            log.info("Deleting product with ID: {}", id);
-            productService.deleteByProductId(id);
-            response.setMessage("Product deleted successfully");
-        } catch (Exception e) {
-            log.error("Error deleting product with ID: {}", id, e);
-            response.setMessage("Failed to delete product: " + e.getMessage());
-        }
+        response.setMessage("Product deleted successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;

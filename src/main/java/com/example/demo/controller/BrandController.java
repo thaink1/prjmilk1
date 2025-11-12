@@ -27,11 +27,12 @@ public class BrandController {
         BaseResponse<List<Brand>> response = new BaseResponse<>();
         try {
             log.info("Request to get all brands");
-            response.setBody(brandService.getAllBrands());
+            List<Brand> brands = brandService.getAllBrands();
+            response.setBody(brands);
             response.setMessage("Fetched all brands successfully");
         } catch (Exception e) {
             log.error("Error fetching all brands", e);
-            response.setMessage("Failed to fetch brands: " + e.getMessage());
+            throw e; // Để GlobalExceptionHandler xử lý lỗi
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -43,11 +44,12 @@ public class BrandController {
         BaseResponse<Brand> response = new BaseResponse<>();
         try {
             log.info("Request to get brand with ID: {}", id);
-            response.setBody(brandService.getBrand(id));
+            Brand brand = brandService.getBrand(id);
+            response.setBody(brand);
             response.setMessage("Fetched brand successfully");
         } catch (Exception e) {
             log.error("Error fetching brand with ID: {}", id, e);
-            response.setMessage("Failed to fetch brand: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -56,15 +58,12 @@ public class BrandController {
 
     @PostMapping("")
     public BaseResponse<Brand> createBrand(@Valid @RequestBody Brand brand) {
+        log.info("Request to create brand with name: {}", brand.getName());
+        Brand created = brandService.createBrand(brand);
+
         BaseResponse<Brand> response = new BaseResponse<>();
-        try {
-            log.info("Request to create brand with name: {}", brand.getName());
-            response.setBody(brandService.createBrand(brand));
-            response.setMessage("Brand created successfully");
-        } catch (Exception e) {
-            log.error("Error creating brand: {}", brand.getName(), e);
-            response.setMessage("Failed to create brand: " + e.getMessage());
-        }
+        response.setMessage("Brand created successfully");
+        response.setBody(created);
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -75,11 +74,12 @@ public class BrandController {
         BaseResponse<Brand> response = new BaseResponse<>();
         try {
             log.info("Request to update brand with ID: {}", id);
-            response.setBody(brandService.updateBrand(id, brand));
+            Brand updated = brandService.updateBrand(id, brand);
+            response.setBody(updated);
             response.setMessage("Brand updated successfully");
         } catch (Exception e) {
             log.error("Error updating brand with ID: {}", id, e);
-            response.setMessage("Failed to update brand: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -95,7 +95,7 @@ public class BrandController {
             response.setMessage("Brand deleted successfully");
         } catch (Exception e) {
             log.error("Error deleting brand with ID: {}", id, e);
-            response.setMessage("Failed to delete brand: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());

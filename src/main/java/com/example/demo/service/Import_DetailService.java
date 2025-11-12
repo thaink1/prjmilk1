@@ -29,6 +29,7 @@ public class Import_DetailService {
     private final ProductRepo productRepo;
     private final ObjectMapper objectMapper;
     private final InventoryRepo inventoryRepo;
+    private  final InventoryHistoryService inventoryHistoryService;
 
     public List<Import_DetailResponse> getDetailByImportId(Long importId) {
         try {
@@ -97,6 +98,7 @@ public class Import_DetailService {
             inventory.setDate(importInvoice.getDate().atStartOfDay());
             inventory.setReason("Import Product");
             inventoryRepo.save(inventory);
+            inventoryHistoryService.createHistory(inventory);
 
             log.info("Recorded inventory change for import product ID {}", importDetail.getProductId());
 
@@ -152,6 +154,8 @@ public class Import_DetailService {
             inventory.setReason("Change Import Product");
             inventory.setDate(importInvoice.getDate().atStartOfDay());
             inventoryRepo.save(inventory);
+            inventoryHistoryService.createHistory(inventory);
+
 
             Import_DetailIF result = import_DetailRepo.findImportDetailById(id);
             return objectMapper.convertValue(result, new TypeReference<Import_DetailResponse>() {});
@@ -192,6 +196,8 @@ public class Import_DetailService {
             inventory.setDate(importInvoice.getDate().atStartOfDay());
             inventory.setReason("Cancel Import");
             inventoryRepo.save(inventory);
+            inventoryHistoryService.createHistory(inventory);
+
 
             import_DetailRepo.delete(importDetail);
             log.info("Import detail deleted successfully with ID: {}", id);

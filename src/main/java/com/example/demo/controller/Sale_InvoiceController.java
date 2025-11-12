@@ -19,19 +19,16 @@ import java.util.List;
 @Slf4j
 public class Sale_InvoiceController {
 
-    private final Sale_InvoiceService sale_invoiceService;
+    private final Sale_InvoiceService saleInvoiceService;
 
     @GetMapping("")
     public BaseResponse<List<Sale_InvoiceResponse>> getAllSaleInvoices() {
+        log.info("Request to fetch all sale invoices");
+        List<Sale_InvoiceResponse> invoices = saleInvoiceService.getAllSaleInvoices();
+
         BaseResponse<List<Sale_InvoiceResponse>> response = new BaseResponse<>();
-        try {
-            log.info("Request to fetch all sale invoices");
-            response.setBody(sale_invoiceService.getAllSaleInvoices());
-            response.setMessage("Fetched all sale invoices successfully");
-        } catch (Exception e) {
-            log.error("Error fetching all sale invoices", e);
-            response.setMessage("Failed to fetch sale invoices: " + e.getMessage());
-        }
+        response.setBody(invoices);
+        response.setMessage("Fetched all sale invoices successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -39,31 +36,25 @@ public class Sale_InvoiceController {
 
     @GetMapping("/{id}")
     public BaseResponse<Sale_InvoiceResponse> getSaleInvoice(@PathVariable Long id) {
+        log.info("Fetching sale invoice with ID: {}", id);
+        Sale_InvoiceResponse invoice = saleInvoiceService.getSaleInvoiceById(id);
+
         BaseResponse<Sale_InvoiceResponse> response = new BaseResponse<>();
-        try {
-            log.info("Request to fetch sale invoice with ID: {}", id);
-            response.setBody(sale_invoiceService.getSaleInvoiceById(id));
-            response.setMessage("Fetched sale invoice successfully");
-        } catch (Exception e) {
-            log.error("Error fetching sale invoice with ID: {}", id, e);
-            response.setMessage("Failed to fetch sale invoice: " + e.getMessage());
-        }
+        response.setBody(invoice);
+        response.setMessage("Fetched sale invoice successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
     }
 
     @PostMapping("")
-    public BaseResponse<Sale_InvoiceResponse> createSaleInvoice(@Valid @RequestBody Sale_Invoice sale_invoice) {
+    public BaseResponse<Sale_InvoiceResponse> createSaleInvoice(@Valid @RequestBody Sale_Invoice saleInvoice) {
+        log.info("Creating sale invoice for customerId: {}", saleInvoice.getCustomerId());
+        Sale_InvoiceResponse created = saleInvoiceService.createSaleInvoice(saleInvoice);
+
         BaseResponse<Sale_InvoiceResponse> response = new BaseResponse<>();
-        try {
-            log.info("Request to create sale invoice for customerId: {}", sale_invoice.getCustomerId());
-            response.setBody(sale_invoiceService.createSaleInvoice(sale_invoice));
-            response.setMessage("Sale invoice created successfully");
-        } catch (Exception e) {
-            log.error("Error creating sale invoice for customerId: {}", sale_invoice.getCustomerId(), e);
-            response.setMessage("Failed to create sale invoice: " + e.getMessage());
-        }
+        response.setBody(created);
+        response.setMessage("Sale invoice created successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -72,16 +63,13 @@ public class Sale_InvoiceController {
     @PutMapping("/{id}")
     public BaseResponse<Sale_InvoiceResponse> updateSaleInvoice(
             @PathVariable Long id,
-            @Valid @RequestBody Sale_Invoice sale_invoice) {
+            @Valid @RequestBody Sale_Invoice saleInvoice) {
+        log.info("Updating sale invoice with ID: {}", id);
+        Sale_InvoiceResponse updated = saleInvoiceService.updateSaleInvoice(id, saleInvoice);
+
         BaseResponse<Sale_InvoiceResponse> response = new BaseResponse<>();
-        try {
-            log.info("Request to update sale invoice with ID: {}", id);
-            response.setBody(sale_invoiceService.updateSaleInvoice(id, sale_invoice));
-            response.setMessage("Sale invoice updated successfully");
-        } catch (Exception e) {
-            log.error("Error updating sale invoice with ID: {}", id, e);
-            response.setMessage("Failed to update sale invoice: " + e.getMessage());
-        }
+        response.setBody(updated);
+        response.setMessage("Sale invoice updated successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -89,15 +77,11 @@ public class Sale_InvoiceController {
 
     @DeleteMapping("/{id}")
     public BaseResponse<Void> deleteSaleInvoice(@PathVariable Long id) {
+        log.info("Deleting sale invoice with ID: {}", id);
+        saleInvoiceService.deleteSaleInvoice(id);
+
         BaseResponse<Void> response = new BaseResponse<>();
-        try {
-            log.info("Request to delete sale invoice with ID: {}", id);
-            sale_invoiceService.deleteSaleInvoice(id);
-            response.setMessage("Sale invoice deleted successfully");
-        } catch (Exception e) {
-            log.error("Error deleting sale invoice with ID: {}", id, e);
-            response.setMessage("Failed to delete sale invoice: " + e.getMessage());
-        }
+        response.setMessage("Sale invoice deleted successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;

@@ -23,15 +23,12 @@ public class Sale_DetailController {
 
     @GetMapping("/saleInvoice/{saleId}")
     public BaseResponse<List<Sale_DetailResponse>> getAllSaleDetailBySaleId(@PathVariable("saleId") Long saleId) {
+        log.info("Fetching all sale details for saleId: {}", saleId);
+        List<Sale_DetailResponse> saleDetails = saleDetailService.getSaleDetailBySaleId(saleId);
+
         BaseResponse<List<Sale_DetailResponse>> response = new BaseResponse<>();
-        try {
-            log.info("Fetching all sale details for saleId: {}", saleId);
-            response.setBody(saleDetailService.getSaleDetailBySaleId(saleId));
-            response.setMessage("Fetched sale details successfully");
-        } catch (Exception e) {
-            log.error("Error fetching sale details for saleId: {}", saleId, e);
-            response.setMessage("Failed to fetch sale details: " + e.getMessage());
-        }
+        response.setBody(saleDetails);
+        response.setMessage("Fetched sale details successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -39,15 +36,12 @@ public class Sale_DetailController {
 
     @GetMapping("/{id}")
     public BaseResponse<Sale_DetailResponse> getSaleDetailById(@PathVariable("id") Long id) {
+        log.info("Fetching sale detail by id: {}", id);
+        Sale_DetailResponse saleDetail = saleDetailService.getSaleDetailById(id);
+
         BaseResponse<Sale_DetailResponse> response = new BaseResponse<>();
-        try {
-            log.info("Fetching sale detail by id: {}", id);
-            response.setBody(saleDetailService.getSaleDetailById(id));
-            response.setMessage("Fetched sale detail successfully");
-        } catch (Exception e) {
-            log.error("Error fetching sale detail by id: {}", id, e);
-            response.setMessage("Failed to fetch sale detail: " + e.getMessage());
-        }
+        response.setBody(saleDetail);
+        response.setMessage("Fetched sale detail successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -55,15 +49,12 @@ public class Sale_DetailController {
 
     @PostMapping("")
     public BaseResponse<Sale_DetailResponse> createSaleDetail(@Valid @RequestBody Sale_Detail saleDetail) {
+        log.info("Creating new sale detail for saleId: {}", saleDetail.getSaleId());
+        Sale_DetailResponse created = saleDetailService.createSaleDetail(saleDetail);
+
         BaseResponse<Sale_DetailResponse> response = new BaseResponse<>();
-        try {
-            log.info("Creating new sale detail for saleId: {}", saleDetail.getSaleId());
-            response.setBody(saleDetailService.createSaleDetail(saleDetail));
-            response.setMessage("Created sale detail successfully");
-        } catch (Exception e) {
-            log.error("Error creating sale detail for saleId: {}", saleDetail.getSaleId(), e);
-            response.setMessage("Failed to create sale detail: " + e.getMessage());
-        }
+        response.setBody(created);
+        response.setMessage("Created sale detail successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -73,15 +64,12 @@ public class Sale_DetailController {
     public BaseResponse<Sale_DetailResponse> updateSaleDetail(
             @PathVariable("id") Long id,
             @Valid @RequestBody Sale_Detail saleDetail) {
+        log.info("Updating sale detail with id: {}", id);
+        Sale_DetailResponse updated = saleDetailService.updateSaleDetail(id, saleDetail);
+
         BaseResponse<Sale_DetailResponse> response = new BaseResponse<>();
-        try {
-            log.info("Updating sale detail with id: {}", id);
-            response.setBody(saleDetailService.updateSaleDetail(id, saleDetail));
-            response.setMessage("Updated sale detail successfully");
-        } catch (Exception e) {
-            log.error("Error updating sale detail with id: {}", id, e);
-            response.setMessage("Failed to update sale detail: " + e.getMessage());
-        }
+        response.setBody(updated);
+        response.setMessage("Updated sale detail successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -89,15 +77,11 @@ public class Sale_DetailController {
 
     @DeleteMapping("/{id}")
     public BaseResponse<Void> deleteSaleDetail(@PathVariable("id") Long id) {
+        log.info("Deleting sale detail with id: {}", id);
+        saleDetailService.deleteSaleDetailById(id);
+
         BaseResponse<Void> response = new BaseResponse<>();
-        try {
-            log.info("Deleting sale detail with id: {}", id);
-            saleDetailService.deleteSaleDetailById(id);
-            response.setMessage("Deleted sale detail successfully");
-        } catch (Exception e) {
-            log.error("Error deleting sale detail with id: {}", id, e);
-            response.setMessage("Failed to delete sale detail: " + e.getMessage());
-        }
+        response.setMessage("Deleted sale detail successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;

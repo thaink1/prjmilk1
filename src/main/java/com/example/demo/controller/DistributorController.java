@@ -27,11 +27,12 @@ public class DistributorController {
         BaseResponse<List<Distributor>> response = new BaseResponse<>();
         try {
             log.info("Request to get all distributors");
-            response.setBody(distributorService.findAllDistributors());
+            List<Distributor> distributors = distributorService.findAllDistributors();
+            response.setBody(distributors);
             response.setMessage("Fetched all distributors successfully");
         } catch (Exception e) {
             log.error("Error fetching all distributors", e);
-            response.setMessage("Failed to fetch distributors: " + e.getMessage());
+            throw e; // để GlobalExceptionHandler xử lý
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -43,11 +44,12 @@ public class DistributorController {
         BaseResponse<Distributor> response = new BaseResponse<>();
         try {
             log.info("Request to get distributor by ID: {}", id);
-            response.setBody(distributorService.findDistributorById(id));
+            Distributor distributor = distributorService.findDistributorById(id);
+            response.setBody(distributor);
             response.setMessage("Fetched distributor successfully");
         } catch (Exception e) {
             log.error("Error fetching distributor with ID: {}", id, e);
-            response.setMessage("Failed to fetch distributor: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -56,15 +58,12 @@ public class DistributorController {
 
     @PostMapping("")
     public BaseResponse<Distributor> createDistributor(@Valid @RequestBody Distributor distributor) {
+        log.info("Request to create distributor: {}", distributor.getName());
+        Distributor created = distributorService.createDistributor(distributor);
+
         BaseResponse<Distributor> response = new BaseResponse<>();
-        try {
-            log.info("Request to create distributor: {}", distributor.getName());
-            response.setBody(distributorService.createDistributor(distributor));
-            response.setMessage("Distributor created successfully");
-        } catch (Exception e) {
-            log.error("Error creating distributor: {}", distributor.getName(), e);
-            response.setMessage("Failed to create distributor: " + e.getMessage());
-        }
+        response.setMessage("Distributor created successfully");
+        response.setBody(created);
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -75,11 +74,12 @@ public class DistributorController {
         BaseResponse<Distributor> response = new BaseResponse<>();
         try {
             log.info("Request to update distributor with ID: {}", id);
-            response.setBody(distributorService.updateDistributor(id, distributor));
+            Distributor updated = distributorService.updateDistributor(id, distributor);
+            response.setBody(updated);
             response.setMessage("Distributor updated successfully");
         } catch (Exception e) {
             log.error("Error updating distributor with ID: {}", id, e);
-            response.setMessage("Failed to update distributor: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -95,7 +95,7 @@ public class DistributorController {
             response.setMessage("Distributor deleted successfully");
         } catch (Exception e) {
             log.error("Error deleting distributor with ID: {}", id, e);
-            response.setMessage("Failed to delete distributor: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());

@@ -26,11 +26,12 @@ public class Import_DetailController {
         BaseResponse<List<Import_DetailResponse>> response = new BaseResponse<>();
         try {
             log.info("Fetching import details by importId: {}", importId);
-            response.setBody(import_DetailService.getDetailByImportId(importId));
+            List<Import_DetailResponse> details = import_DetailService.getDetailByImportId(importId);
+            response.setBody(details);
             response.setMessage("Fetched details successfully");
         } catch (Exception e) {
             log.error("Error fetching details for importId: {}", importId, e);
-            response.setMessage("Failed to fetch details: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -42,11 +43,12 @@ public class Import_DetailController {
         BaseResponse<Import_DetailResponse> response = new BaseResponse<>();
         try {
             log.info("Fetching import detail by ID: {}", detailId);
-            response.setBody(import_DetailService.getDetailById(detailId));
+            Import_DetailResponse detail = import_DetailService.getDetailById(detailId);
+            response.setBody(detail);
             response.setMessage("Fetched detail successfully");
         } catch (Exception e) {
             log.error("Error fetching import detail with ID: {}", detailId, e);
-            response.setMessage("Failed to fetch detail: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -55,15 +57,12 @@ public class Import_DetailController {
 
     @PostMapping("")
     public BaseResponse<Import_DetailResponse> createDetail(@Valid @RequestBody Import_Detail importDetail) {
+        log.info("Creating new import detail for importId: {}", importDetail.getImportId());
+        Import_DetailResponse created = import_DetailService.createDetail(importDetail);
+
         BaseResponse<Import_DetailResponse> response = new BaseResponse<>();
-        try {
-            log.info("Creating new import detail for importId: {}", importDetail.getImportId());
-            response.setBody(import_DetailService.createDetail(importDetail));
-            response.setMessage("Import detail created successfully");
-        } catch (Exception e) {
-            log.error("Error creating import detail", e);
-            response.setMessage("Failed to create import detail: " + e.getMessage());
-        }
+        response.setBody(created);
+        response.setMessage("Import detail created successfully");
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
         return response;
@@ -76,11 +75,12 @@ public class Import_DetailController {
         BaseResponse<Import_DetailResponse> response = new BaseResponse<>();
         try {
             log.info("Updating import detail ID: {}", detailId);
-            response.setBody(import_DetailService.updateDetail(detailId, importDetail));
+            Import_DetailResponse updated = import_DetailService.updateDetail(detailId, importDetail);
+            response.setBody(updated);
             response.setMessage("Import detail updated successfully");
         } catch (Exception e) {
             log.error("Error updating import detail ID: {}", detailId, e);
-            response.setMessage("Failed to update import detail: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -96,7 +96,7 @@ public class Import_DetailController {
             response.setMessage("Import detail deleted successfully");
         } catch (Exception e) {
             log.error("Error deleting import detail with ID: {}", detailId, e);
-            response.setMessage("Failed to delete import detail: " + e.getMessage());
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());

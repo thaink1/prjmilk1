@@ -3,11 +3,10 @@ package com.example.demo.service;
 import com.example.demo.dto.*;
 import com.example.demo.model.Image;
 import com.example.demo.model.Product;
+import com.example.demo.redis.RedisService;
 import com.example.demo.repo.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -32,12 +32,20 @@ public class ProductService {
     ObjectMapper objectMapper;
     ImageRepo imageRepo;
     PromotionRepo promotionRepo;
+    RedisService redisService;
 
-    @PersistenceContext
-    EntityManager entityManager;
+    private static final String PRODUCT_CACHE = "product:";
+    private static final String ALL_PRODUCTS_CACHE = "allProducts";
 
     public ProductResponse getProductById(long id) {
+        String cacheKey = PRODUCT_CACHE + id;
         try {
+            ProductResponse cached = redisService.getValue(cacheKey, ProductResponse.class);
+            if (cached != null ) {
+                log.info("product {} từ Redis cache", id);
+                return cached;
+            }
+
             log.info("Fetching product with ID: {}", id);
             Product product = productRepo.findById(id)
                     .orElseThrow(() -> {
@@ -52,7 +60,8 @@ public class ProductService {
             List<ImageResponse> images = objectMapper.convertValue(imageIFs, new TypeReference<>() {});
             response.setImages(images);
 
-            log.info("Fetched product successfully with ID: {}", id);
+            redisService.setValue(cacheKey, response, Duration.ofMinutes(30));
+            log.info("Đã cache product {} vào Redis", id);
             return response;
         } catch (Exception e) {
             log.error("Error fetching product with ID: {}", id, e);
@@ -62,6 +71,12 @@ public class ProductService {
 
     public List<ProductResponse> getAllProducts() {
         try {
+            List<ProductResponse> cached = redisService.getValue(ALL_PRODUCTS_CACHE, List.class);
+            if (cached != null && !cached.isEmpty()) {
+                log.info("Lấy danh sách sản phẩm từ Redis cache");
+                return cached;
+            }
+
             log.info("Fetching all products...");
             List<ProductIF> results = productRepo.findAllProductsWithRelations();
             List<ProductResponse> responses = objectMapper.convertValue(results, new TypeReference<>() {});
@@ -70,7 +85,10 @@ public class ProductService {
                 List<ImageResponse> images = objectMapper.convertValue(imageIFs, new TypeReference<>() {});
                 response.setImages(images);
             }
-            log.info("Fetched {} products successfully", responses.size());
+
+            redisService.setValue(ALL_PRODUCTS_CACHE, responses, Duration.ofMinutes(15));
+            log.info("Đã cache danh sách sản phẩm vào Redis ({} items)", responses.size());
+
             return responses;
         } catch (Exception e) {
             log.error("Error fetching all products", e);
@@ -87,8 +105,10 @@ public class ProductService {
             Product product = new Product();
             BeanUtils.copyProperties(request, product);
             productRepo.save(product);
+
             log.info("Product created successfully with ID: {}", product.getProductId());
 
+            // Lưu ảnh
             if (request.getImages() != null) {
                 validatePrimaryImage(request);
                 for (var img : request.getImages()) {
@@ -108,7 +128,9 @@ public class ProductService {
             List<ImageResponse> imageResponses = objectMapper.convertValue(imageIFs, new TypeReference<>() {});
             response.setImages(imageResponses);
 
-            log.info("Product created and fully loaded with relations, ID: {}", product.getProductId());
+            redisService.deleteValue(ALL_PRODUCTS_CACHE);
+
+            log.info("Product created successfully and cache invalidated");
             return response;
         } catch (Exception e) {
             log.error("Error creating product: {}", request.getProductName(), e);
@@ -118,6 +140,7 @@ public class ProductService {
 
     @Transactional
     public ProductResponse updateProduct(Long id, ProductRequest request) {
+        String cacheKey = PRODUCT_CACHE + id;
         try {
             log.info("Updating product with ID: {}", id);
             Product product = productRepo.findById(id)
@@ -134,7 +157,6 @@ public class ProductService {
             if (request.getImages() != null) {
                 imageRepo.deleteByProductId(product.getProductId());
                 validatePrimaryImage(request);
-
                 for (var img : request.getImages()) {
                     Image image = new Image();
                     image.setProductId(product.getProductId());
@@ -152,7 +174,10 @@ public class ProductService {
             List<ImageResponse> images = objectMapper.convertValue(imageIFs, new TypeReference<>() {});
             response.setImages(images);
 
-            log.info("Updated product successfully with ID: {}", id);
+            redisService.deleteValue(cacheKey);
+            redisService.deleteValue(ALL_PRODUCTS_CACHE);
+            log.info("Invalidated cache after updating product {}", id);
+
             return response;
         } catch (Exception e) {
             log.error("Error updating product with ID: {}", id, e);
@@ -160,7 +185,9 @@ public class ProductService {
         }
     }
 
+    @Transactional
     public void deleteByProductId(Long productId) {
+        String cacheKey = PRODUCT_CACHE + productId;
         try {
             log.info("Deleting product with ID: {}", productId);
             Product product = productRepo.findById(productId)
@@ -173,7 +200,10 @@ public class ProductService {
             promotionRepo.deleteByProductId(productId);
             productRepo.deleteById(productId);
 
-            log.info("Product deleted successfully with ID: {}", productId);
+            redisService.deleteValue(cacheKey);
+            redisService.deleteValue(ALL_PRODUCTS_CACHE);
+
+            log.info("Deleted product {} and cleared Redis cache", productId);
         } catch (Exception e) {
             log.error("Error deleting product with ID: {}", productId, e);
             throw e;
