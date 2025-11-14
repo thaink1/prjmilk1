@@ -335,3 +335,195 @@
 2025-11-14 17:39:09 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-11-14 17:39:09 INFO  [] [] HikariPool-1 - Shutdown initiated...
 2025-11-14 17:39:09 INFO  [] [] HikariPool-1 - Shutdown completed.
+2025-11-14 18:16:35 INFO  [] [] Starting PrjmlkApplication using Java 17.0.12 with PID 7684 (E:\ProjectSPB\demo\out\production\classes started by Acer in E:\ProjectSPB\demo)
+2025-11-14 18:16:35 INFO  [] [] No active profile set, falling back to 1 default profile: "default"
+2025-11-14 18:16:36 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-14 18:16:36 INFO  [] [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-14 18:16:36 INFO  [] [] Finished Spring Data repository scanning in 125 ms. Found 14 JPA repository interfaces.
+2025-11-14 18:16:36 INFO  [] [] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-14 18:16:36 INFO  [] [] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.AccountRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.BrandRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CategoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.CustomerRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.DistributorRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ImageRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Import_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.InventoryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PaymentRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.ProductRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.PromotionRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_DetailRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repo.Sale_InvoiceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-14 18:16:36 INFO  [] [] Finished Spring Data repository scanning in 166 ms. Found 0 Redis repository interfaces.
+2025-11-14 18:16:37 INFO  [] [] Tomcat initialized with port 8080 (http)
+2025-11-14 18:16:37 INFO  [] [] Starting service [Tomcat]
+2025-11-14 18:16:37 INFO  [] [] Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-11-14 18:16:37 INFO  [] [] Initializing Spring embedded WebApplicationContext
+2025-11-14 18:16:37 INFO  [] [] Root WebApplicationContext: initialization completed in 1637 ms
+2025-11-14 18:16:37 INFO  [] [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-14 18:16:37 INFO  [] [] HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-14 18:16:37 INFO  [] [] HHH000026: Second-level cache disabled
+2025-11-14 18:16:38 INFO  [] [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-14 18:16:38 INFO  [] [] HikariPool-1 - Starting...
+2025-11-14 18:16:38 INFO  [] [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@430106cf
+2025-11-14 18:16:38 INFO  [] [] HikariPool-1 - Start completed.
+2025-11-14 18:16:38 INFO  [] [] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-14 18:16:39 INFO  [] [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-14 18:16:39 INFO  [] [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-14 18:16:39 INFO  [] [] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-14 18:16:40 WARN  [] [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-14 18:16:40 INFO  [] [] Tomcat started on port 8080 (http) with context path '/'
+2025-11-14 18:16:40 INFO  [] [] Attempting to connect to: [localhost:5672]
+2025-11-14 18:16:40 INFO  [] [] Created new connection: rabbitConnectionFactory#57386162:0/SimpleConnection@509b760e [delegate=amqp://guest@127.0.0.1:5672/, localPort=53741]
+2025-11-14 18:16:40 INFO  [] [] Started PrjmlkApplication in 5.739 seconds (process running for 6.46)
+2025-11-14 18:17:52 INFO  [] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-14 18:17:52 INFO  [] [] Initializing Servlet 'dispatcherServlet'
+2025-11-14 18:17:52 INFO  [] [] Completed initialization in 1 ms
+2025-11-14 18:17:52 INFO  [779e25e7-4c33-4818-9f8d-5eaaa4b7511f] [] Incoming request: method=POST, uri=/auth/google, X-REQUEST-ID=779e25e7-4c33-4818-9f8d-5eaaa4b7511f, signature=null
+2025-11-14 18:17:53 INFO  [779e25e7-4c33-4818-9f8d-5eaaa4b7511f] [] Completed request: status=400, duration=107ms
+2025-11-14 18:18:25 INFO  [3d76d439-2fd6-44af-aaff-cc7fdf9bfe0d] [] Incoming request: method=POST, uri=/auth/google, X-REQUEST-ID=3d76d439-2fd6-44af-aaff-cc7fdf9bfe0d, signature=null
+2025-11-14 18:18:25 INFO  [3d76d439-2fd6-44af-aaff-cc7fdf9bfe0d] [] Completed request: status=400, duration=6ms
+2025-11-14 18:18:56 INFO  [08f92607-f444-4c12-9cf0-fb354d78df99] [] Incoming request: method=POST, uri=/auth/google, X-REQUEST-ID=08f92607-f444-4c12-9cf0-fb354d78df99, signature=null
+2025-11-14 18:18:56 ERROR [08f92607-f444-4c12-9cf0-fb354d78df99] [] Error verifying Google token
+java.lang.RuntimeException: Invalid Google ID token
+	at com.example.demo.service.GoogleService.verifyToken(GoogleService.java:41)
+	at com.example.demo.controller.AuthController.loginWithGoogle(AuthController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.demo.filter.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-11-14 18:18:56 INFO  [08f92607-f444-4c12-9cf0-fb354d78df99] [] Completed request: status=400, duration=53ms
+2025-11-14 18:27:58 INFO  [d894113b-edba-455a-8e6f-188dbbe90fa1] [] Incoming request: method=POST, uri=/auth/google, X-REQUEST-ID=d894113b-edba-455a-8e6f-188dbbe90fa1, signature=null
+2025-11-14 18:27:58 INFO  [d894113b-edba-455a-8e6f-188dbbe90fa1] [] Completed request: status=400, duration=5ms
+2025-11-14 18:28:10 INFO  [7387cf51-85b8-4d09-b83d-be9b8913b785] [] Incoming request: method=POST, uri=/auth/google, X-REQUEST-ID=7387cf51-85b8-4d09-b83d-be9b8913b785, signature=null
+2025-11-14 18:28:10 ERROR [7387cf51-85b8-4d09-b83d-be9b8913b785] [] Error verifying Google token
+java.lang.RuntimeException: Invalid Google ID token
+	at com.example.demo.service.GoogleService.verifyToken(GoogleService.java:41)
+	at com.example.demo.controller.AuthController.loginWithGoogle(AuthController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.demo.filter.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-11-14 18:28:10 INFO  [7387cf51-85b8-4d09-b83d-be9b8913b785] [] Completed request: status=400, duration=5ms
+2025-11-14 18:37:01 INFO  [02994bb4-a9bc-49d3-9f09-5ee6f2209736] [] Incoming request: method=POST, uri=/auth/google, X-REQUEST-ID=02994bb4-a9bc-49d3-9f09-5ee6f2209736, signature=null
+2025-11-14 18:37:01 INFO  [02994bb4-a9bc-49d3-9f09-5ee6f2209736] [] Completed request: status=400, duration=3ms
+2025-11-14 18:52:46 INFO  [b90d4c26-2e42-49ef-b606-88f8cdd67316] [] Incoming request: method=POST, uri=/auth/google, X-REQUEST-ID=b90d4c26-2e42-49ef-b606-88f8cdd67316, signature=null
+2025-11-14 18:52:46 INFO  [b90d4c26-2e42-49ef-b606-88f8cdd67316] [] Completed request: status=400, duration=3ms
+2025-11-14 18:57:59 INFO  [b7db9ac2-d667-4064-9947-438ced2ffe53] [] Incoming request: method=POST, uri=/auth/google, X-REQUEST-ID=b7db9ac2-d667-4064-9947-438ced2ffe53, signature=null
+2025-11-14 18:57:59 INFO  [b7db9ac2-d667-4064-9947-438ced2ffe53] [] Completed request: status=400, duration=4ms
+2025-11-14 18:58:26 INFO  [] [] Waiting for workers to finish.
+2025-11-14 18:58:26 INFO  [] [] Successfully waited for workers to finish.
+2025-11-14 18:58:26 INFO  [] [] Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-14 18:58:27 INFO  [] [] Graceful shutdown complete
+2025-11-14 18:58:27 INFO  [] [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-14 18:58:27 INFO  [] [] HikariPool-1 - Shutdown initiated...
+2025-11-14 18:58:27 INFO  [] [] HikariPool-1 - Shutdown completed.
