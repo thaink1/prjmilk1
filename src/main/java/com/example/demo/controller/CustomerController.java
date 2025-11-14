@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.BaseResponse;
+import com.example.demo.dto.CustomerSearch;
 import com.example.demo.model.Customer;
 import com.example.demo.service.CustomerService;
 import jakarta.validation.Valid;
@@ -30,7 +31,7 @@ public class CustomerController {
             response.setMessage("Fetched all customers successfully");
         } catch (Exception e) {
             log.error("Error fetching all customers", e);
-            throw e; // ❗ để GlobalExceptionHandler xử lý
+            throw e;
         }
         response.setRequestId(MDC.get("requestId"));
         response.setResponseTime(LocalDateTime.now());
@@ -110,6 +111,28 @@ public class CustomerController {
             response.setMessage("Deleted customer with ID: " + id + " successfully");
         } catch (Exception e) {
             log.error("Error deleting customer with ID: {}", id, e);
+            throw e;
+        }
+        response.setRequestId(MDC.get("requestId"));
+        response.setResponseTime(LocalDateTime.now());
+        return response;
+    }
+
+    @PostMapping("/search")
+    public BaseResponse<List<Customer>> searchCustomers(@RequestBody CustomerSearch request) {
+        BaseResponse<List<Customer>> response = new BaseResponse<>();
+        try{
+            log.info("Request to search customers {}", request);
+            List<Customer> customers = customerService.searchCustomers(request);
+            if (customers.size() == 0 ){
+                response.setMessage("No customers found");
+                response.setBody(customers);
+            }else {
+                response.setBody(customers);
+                response.setMessage("Fetched customers successfully");
+            }
+        }catch (Exception e){
+            log.error("Error fetching customers {}", request, e);
             throw e;
         }
         response.setRequestId(MDC.get("requestId"));

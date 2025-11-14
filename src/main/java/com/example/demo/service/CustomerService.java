@@ -1,9 +1,12 @@
 package com.example.demo.service;
 
+import com.example.demo.dto.CustomerSearch;
 import com.example.demo.model.Customer;
 import com.example.demo.repo.CustomerRepo;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -124,6 +127,29 @@ public class CustomerService {
             log.info("Customer deleted successfully: {}", customer.getName());
         } catch (Exception e) {
             log.error("Error while deleting customer with ID: {}", id, e);
+            throw e;
+        }
+    }
+    public List<Customer> searchCustomers(CustomerSearch request) {
+        try {
+            log.info("Searching customers with filters: {}", request);
+
+            Customer probe = new Customer();
+            probe.setName(request.getName());
+            probe.setEmail(request.getEmail());
+            probe.setPhone(request.getPhone());
+            probe.setAddress(request.getAddress());
+
+            ExampleMatcher matcher = ExampleMatcher.matchingAll()
+                    .withIgnoreCase()
+                    .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING);
+
+            List<Customer> results = customerRepo.findAll(Example.of(probe, matcher));
+
+            log.info("Found {} customers matching search criteria", results.size());
+            return results;
+        } catch (Exception e) {
+            log.error("Error while searching customers", e);
             throw e;
         }
     }
